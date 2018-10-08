@@ -40,10 +40,12 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="110dp"
-        android:text="Application mobile de Pierre-Damien et Margaux pour le TP de promob"
+        android:text="Application mobile de Pierre-Damien et Margaux pour le TP de promob2018"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
 
 </android.support.constraint.ConstraintLayout>
