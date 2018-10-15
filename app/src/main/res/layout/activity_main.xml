@@ -51,8 +51,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="203dp"
+        android:layout_height="149dp"
         android:layout_marginStart="155dp"
         android:layout_marginLeft="155dp"
         android:layout_marginTop="57dp"
@@ -61,8 +61,10 @@
         android:layout_marginBottom="105dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 </android.support.constraint.ConstraintLayout>
