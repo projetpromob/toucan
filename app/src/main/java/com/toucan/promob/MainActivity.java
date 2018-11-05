@@ -1,5 +1,6 @@
 package com.toucan.promob;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mGreetingText;
     private EditText mNameInput;
     private Button mPlayButton;
+    //private mouvButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
         mGreetingText = (TextView) findViewById(R.id.activity_main_greeting_txt);
         mNameInput = (EditText) findViewById(R.id.activity_main_name_input);
         mPlayButton = (Button) findViewById(R.id.activity_main_play_btn);
+        //mouvButton = (Button) findViewById(R.id.mv_btn);
 
         mPlayButton.setEnabled(false);
+        //mouvButton.setEnabled(false);
 
         mNameInput.addTextChangedListener(new TextWatcher() {
             @Override
@@ -52,5 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 // The user just clicked
             }
         });
+    }
+
+    public void sendMovement(View view){
+        Intent startNewActivity = new Intent(this, GameMouvement.class );
+        startActivity(startNewActivity);
     }
 }

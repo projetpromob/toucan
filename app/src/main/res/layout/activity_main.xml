@@ -32,4 +32,14 @@
         android:layout_gravity="center_horizontal"
         android:text="Let's play"/>
 
+    <Button
+        android:id="@+id/mv_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="30dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="sendMovement"
+        android:text="@string/btnM" />
+
 </LinearLayout>

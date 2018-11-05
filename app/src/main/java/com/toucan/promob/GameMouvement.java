@@ -67,24 +67,59 @@ public class GameMouvement extends AppCompatActivity {
         }
 
         @Override
-        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float distanceX, float distanceY) {
+            gestureText.setText("onScroll");
+            if(motionEvent.getX() < motionEvent1.getX()){
+                Log.d ("Gesture" , "Left to Right Scroll: " + motionEvent.getX() + " - " + motionEvent1.getX());
+                Log.d ("Speed " , String.valueOf(distanceX) + " pixels/second");
+            }
+            if(motionEvent.getX() > motionEvent1.getX()){
+                Log.d ("Gesture" , "Right to Left Scroll: " + motionEvent.getX() + " - " + motionEvent1.getX());
+                Log.d ("Speed " , String.valueOf(distanceX) + " pixels/second");
+            }
+            if(motionEvent.getY() < motionEvent1.getY()){
+                Log.d ("Gesture" , "Up to Down Scroll: " + motionEvent.getY() + " - " + motionEvent1.getY());
+                Log.d ("Speed " , String.valueOf(distanceY) + " pixels/second");
+            }
+            if(motionEvent.getY() > motionEvent1.getY()){
+                Log.d ("Gesture" , "Down to Up Scroll: " + motionEvent.getY() + " - " + motionEvent1.getY());
+                Log.d ("Speed " , String.valueOf(distanceY) + " pixels/second");
+            }
+
             return false;
         }
 
         @Override
-        public void onLongPress(MotionEvent e) {
+        public void onLongPress(MotionEvent motionEvent) {
             gestureText.setText("onLongPress");
             Log.d("Gesture", "onLongPress");
         }
 
         @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            
+        public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+            gestureText.setText("onFling");
+            if(motionEvent.getX() < motionEvent1.getX()){
+                Log.d ("Gesture" , "Left to Right Fling: " + motionEvent.getX() + " - " + motionEvent1.getX());
+                Log.d ("Speed " , String.valueOf(v) + " pixels/second");
+            }
+            if(motionEvent.getX() > motionEvent1.getX()){
+                Log.d ("Gesture" , "Right to Left Fling: " + motionEvent.getX() + " - " + motionEvent1.getX());
+                Log.d ("Speed " , String.valueOf(v) + " pixels/second");
+            }
+            if(motionEvent.getY() < motionEvent1.getY()){
+                Log.d ("Gesture" , "Up to Down Fling: " + motionEvent.getY() + " - " + motionEvent1.getY());
+                Log.d ("Speed " , String.valueOf(v1) + " pixels/second");
+            }
+            if(motionEvent.getY() > motionEvent1.getY()){
+                Log.d ("Gesture" , "Down to Up Fling: " + motionEvent.getY() + " - " + motionEvent1.getY());
+                Log.d ("Speed " , String.valueOf(v1) + " pixels/second");
+            }
+
             return false;
         }
     }
 
-    public boolean onTouchEvent(MotionEvent , event){
+    public boolean onTouchEvent(MotionEvent  event){
         myGestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
