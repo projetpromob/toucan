@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".GameActivity" />
         <activity android:name=".GameMouvement" />
-        <activity android:name=".GameMouv"></activity>
+        <activity android:name=".Morpion" />
+        <activity android:name=".Poisson" />
+        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".GameOverActivity"></activity>
     </application>
 
 </manifest>

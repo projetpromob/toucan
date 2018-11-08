@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mGreetingText;
     private EditText mNameInput;
     private Button mPlayButton;
-    //private mouvButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         mGreetingText = (TextView) findViewById(R.id.activity_main_greeting_txt);
         mNameInput = (EditText) findViewById(R.id.activity_main_name_input);
         mPlayButton = (Button) findViewById(R.id.activity_main_play_btn);
-        //mouvButton = (Button) findViewById(R.id.mv_btn);
+
 
         mPlayButton.setEnabled(false);
-        //mouvButton.setEnabled(false);
+
 
         mNameInput.addTextChangedListener(new TextWatcher() {
             @Override
@@ -60,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMovement(View view){
         Intent startNewActivity = new Intent(this, GameMouvement.class );
+        startActivity(startNewActivity);
+    }
+    public void sendMorpion(View view){
+        Intent startNewActivity = new Intent(this, Morpion.class );
+        startActivity(startNewActivity);
+    }
+
+    public void sendPoisson(View view){
+        Intent startNewActivity = new Intent(this, SplashActivity.class );
         startActivity(startNewActivity);
     }
 }

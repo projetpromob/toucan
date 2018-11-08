@@ -42,4 +42,25 @@
         android:onClick="sendMovement"
         android:text="@string/btnM" />
 
+    <Button
+        android:id="@+id/mo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="30dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="sendMorpion"
+        android:text="Morpion !" />
+
+    <Button
+        android:id="@+id/po_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="30dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="sendPoisson"
+        android:text="Poisson !" />
+
+
 </LinearLayout>

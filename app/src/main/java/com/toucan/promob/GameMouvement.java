@@ -122,5 +122,6 @@ public class GameMouvement extends AppCompatActivity {
     public boolean onTouchEvent(MotionEvent  event){
         myGestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
+        
     }
 }
