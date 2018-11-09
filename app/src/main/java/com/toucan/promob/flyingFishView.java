@@ -47,7 +47,7 @@ public class flyingFishView extends View
         fish[0] = BitmapFactory.decodeResource(getResources() , R.drawable.fish1);
         fish[1] = BitmapFactory.decodeResource(getResources() , R.drawable.fish2);
 
-        backgroundImage = BitmapFactory.decodeResource(getResources() , R.drawable.background);
+        backgroundImage = BitmapFactory.decodeResource(getResources() , R.drawable.fondquatre);
 
         yellowPaint.setColor(Color.YELLOW);
         yellowPaint.setAntiAlias(false);
@@ -63,8 +63,8 @@ public class flyingFishView extends View
         scorePaint.setTypeface(Typeface.DEFAULT_BOLD);
         scorePaint.setAntiAlias(true);
 
-        life[0] = BitmapFactory.decodeResource(getResources() , R.drawable.hearts);
-        life[1] = BitmapFactory.decodeResource(getResources() , R.drawable.heart_grey);
+        life[0] = BitmapFactory.decodeResource(getResources() , R.drawable.alexcoeur);
+        life[1] = BitmapFactory.decodeResource(getResources() , R.drawable.tetemort);
 
         fishY = 550;
         score = 0;
@@ -151,6 +151,10 @@ public class flyingFishView extends View
 
                 Intent gameOverIntent = new Intent(getContext() , GameOverActivity.class);
                 gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                //Récuperation du score :
+                gameOverIntent.putExtra("scoreRecup", score);
+
                 getContext().startActivity(gameOverIntent);
 
             }
@@ -180,11 +184,6 @@ public class flyingFishView extends View
             }
         }
 
-
-
-        //canvas.drawBitmap(life[0], 580, 10, null);
-        //canvas.drawBitmap(life[0], 680, 10, null);
-        //canvas.drawBitmap(life[0], 780, 10, null);
     }
 
     public boolean hitBallChecker(int x, int y)

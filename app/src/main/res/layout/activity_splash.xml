@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash"
+    android:background="@drawable/fondok"
     tools:context=".SplashActivity">
 
     <ImageView
@@ -13,20 +13,20 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/splash_icon"/>
+        android:src="@drawable/soucoupe"/>
 
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Le poisson volant"
+        android:text="Le zinzin de l'espace"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="115dp"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FFA726"
         android:textSize="34sp"
         android:textStyle="bold"
         />
