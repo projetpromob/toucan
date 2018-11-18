@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SplashActivity extends AppCompatActivity {
+public class PageDebSoucoupe extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_page_deb_soucoupe);
 
         Thread thread = new Thread()
         {
@@ -18,7 +18,8 @@ public class SplashActivity extends AppCompatActivity {
             {
                 try
                 {
-                    sleep(5000);
+                    // Affichage de l'introduction du jeu pendant un temps donné :
+                    sleep(2500);
                 }
                 catch (Exception e)
                 {
@@ -26,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 finally
                 {
-                    Intent mainIntent = new Intent(SplashActivity.this , Poisson.class);
+                    Intent mainIntent = new Intent(PageDebSoucoupe.this , LancementJeuSoucoupe.class);
                     startActivity(mainIntent);
                 }
             }

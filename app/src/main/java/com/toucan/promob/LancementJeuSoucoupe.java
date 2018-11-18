@@ -3,15 +3,14 @@ package com.toucan.promob;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Poisson extends AppCompatActivity
+public class LancementJeuSoucoupe extends AppCompatActivity
 {
 
-    private flyingFishView gameView;
+    private DeroulementJeuSoucoupe gameView;
     private Handler handler = new Handler();
     private final static long Interval = 30;
 
@@ -20,7 +19,7 @@ public class Poisson extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        gameView = new flyingFishView(this);
+        gameView = new DeroulementJeuSoucoupe(this);
         setContentView(gameView);
 
         Timer timer = new Timer();

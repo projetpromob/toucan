@@ -4,30 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondok"
-    tools:context=".SplashActivity">
+    android:background="@drawable/fondoksimpson"
+    tools:context=".PageDebSoucoupe">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView1"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/soucoupe"/>
 
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Le zinzin de l'espace"
+        android:text="Survit dans l'espace mais attention aux météorites !!!"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="30dp"
         android:textAlignment="center"
-        android:textColor="#FFA726"
-        android:textSize="34sp"
+        android:textColor="#F7D101"
+        android:textSize="28sp"
         android:textStyle="bold"
         />
 </RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,6 +19,8 @@
         android:id="@+id/activity_main_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_main_greeting_txt"
+        android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Please type your name"/>
@@ -27,40 +29,44 @@
         android:id="@+id/activity_main_play_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="150dp"
         android:padding="30dp"
         android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:text="Let's play"/>
 
     <Button
         android:id="@+id/mv_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:padding="30dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
         android:onClick="sendMovement"
+        android:padding="30dp"
         android:text="@string/btnM" />
 
     <Button
         android:id="@+id/mo_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:padding="30dp"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
         android:onClick="sendMorpion"
+        android:padding="30dp"
         android:text="Morpion !" />
 
     <Button
         android:id="@+id/po_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:padding="30dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="450dp"
+        android:layout_centerHorizontal="true"
         android:onClick="sendPoisson"
-        android:text="Poisson !" />
+        android:padding="30dp"
+        android:text="GO espace" />
 
 
-</LinearLayout>
+</RelativeLayout>

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendPoisson(View view){
-        Intent startNewActivity = new Intent(this, SplashActivity.class );
+        Intent startNewActivity = new Intent(this, PageDebSoucoupe.class );
         startActivity(startNewActivity);
     }
 }

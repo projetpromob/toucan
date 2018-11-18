@@ -17,7 +17,7 @@
         android:layout_marginTop="80dp"
         android:text="Game Over"
         android:textAlignment="center"
-        android:textColor="#FFA726"
+        android:textColor="#F7D101"
         android:textSize="70dp"
         android:textStyle="bold" />
 
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/gameOver"
         android:layout_centerHorizontal="true"
-        android:background="#FFA726"
+        android:background="#F7D101"
         android:padding="10dp"
         android:text="Rejouer !"
         android:textAllCaps="false"
@@ -44,7 +44,7 @@
         android:layout_marginBottom="178dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="#FFA726"
+        android:textColor="#F7D101"
         android:textSize="25sp"
         android:textStyle="bold" />
 

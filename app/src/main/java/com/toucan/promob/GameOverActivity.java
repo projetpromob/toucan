@@ -30,7 +30,7 @@ public class GameOverActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent mainIntent = new Intent(GameOverActivity.this , Poisson.class);
+                Intent mainIntent = new Intent(GameOverActivity.this , LancementJeuSoucoupe.class);
                 startActivity(mainIntent);
             }
         });
