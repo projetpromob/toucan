@@ -58,24 +58,11 @@ public class DeroulementJeuSoucoupe extends View
 
         homer = BitmapFactory.decodeResource(getResources() , R.drawable.homer);
 
-        //homerPaint.setColor(Color.YELLOW);
-        //homerPaint.setAntiAlias(false);
-
         martien = BitmapFactory.decodeResource(getResources() , R.drawable.martien);
-
-        //martienPaint.setColor(Color.GREEN);
-        //martienPaint.setAntiAlias(false);
 
         meteorite = BitmapFactory.decodeResource(getResources() , R.drawable.meteo);
 
-        //meteoritePaint.setColor(Color.RED);
-        //meteoritePaint.setAntiAlias(false);
-
-        //int rose = R.color.pink;
-        //scorePaint.setColor(rose);
-
         scorePaint.setColor(Color.RED);
-        //scorePaint.setColor(Color.WHITE);
         scorePaint.setTextSize(70);
         scorePaint.setTypeface(Typeface.DEFAULT_BOLD);
         scorePaint.setAntiAlias(true);
@@ -99,6 +86,7 @@ public class DeroulementJeuSoucoupe extends View
 
         canvas.drawBitmap(backgroundImage, 0, 0, null);
 
+        // Gérer juqu'ou monte la soucoupe
         int minSoucoupeY = soucoupe[0].getHeight();
 
         // Gérer jusqu'ou la soucoupe va en bas:
@@ -127,9 +115,10 @@ public class DeroulementJeuSoucoupe extends View
             canvas.drawBitmap(soucoupe[0], soucoupeX, soucoupeY, null);
         }
 
+        // Faire avancer homer
         homerX = homerX - homerSpeed;
 
-        if(hitBallChecker(homerX, homerY))
+        if(ToucherObjet(homerX, homerY) || ToucherObjet(homerX  , homerY + homer.getHeight()))
         {
             score = score + 20;
             homerX = - 100;
@@ -140,12 +129,11 @@ public class DeroulementJeuSoucoupe extends View
             homerX = canvasWidth + 21;
             homerY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
         }
-        //canvas.drawCircle(homerX, homerY, 25, homerPaint);
         canvas.drawBitmap(homer , homerX , homerY , null);
 
         martienX = martienX - martienSpeed;
 
-        if(hitBallChecker(martienX, martienY))
+        if(ToucherObjet(martienX, martienY) || ToucherObjet(martienX , martienY + martien.getHeight()))
         {
             score = score + 10;
             martienX = - 100;
@@ -156,21 +144,18 @@ public class DeroulementJeuSoucoupe extends View
             martienX = canvasWidth + 21;
             martienY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
         }
-        //canvas.drawCircle(martienX, martienY, 25, martienPaint);
         canvas.drawBitmap(martien , martienX , martienY , null);
 
 
         meteoriteX = meteoriteX - meteoriteSpeed;
 
-        if(hitBallChecker(meteoriteX, meteoriteY))
+        if(ToucherObjet(meteoriteX, meteoriteY) || ToucherObjet(meteoriteX , meteoriteY + meteorite.getHeight()))
         {
             meteoriteX = - 100;
             lifeCounterOfSoucoupe--;
 
             if(lifeCounterOfSoucoupe == 0)
             {
-                Toast.makeText(getContext(), "Game Over", Toast.LENGTH_SHORT).show();
-
                 Intent gameOverIntent = new Intent(getContext() , GameOverActivity.class);
                 gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
@@ -188,14 +173,13 @@ public class DeroulementJeuSoucoupe extends View
             meteoriteY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
         }
         canvas.drawBitmap(meteorite , meteoriteX , meteoriteY , null);
-        //canvas.drawCircle(meteoriteX, meteoriteY, 30, meteoritePaint);
 
         canvas.drawText("Score : " + score, 20, 80, scorePaint );
 
         for(int i=0; i<3; i++)
         {
             // gérer la position des coeurs de vies :
-            int x = (int) (600 + life[0].getWidth() * 1.5 * i);
+            int x = (int) (650 + life[0].getWidth() * 1.5 * i);
             int y = 30;
 
             if(i < lifeCounterOfSoucoupe)
@@ -210,7 +194,8 @@ public class DeroulementJeuSoucoupe extends View
 
     }
 
-    public boolean hitBallChecker(int x, int y)
+    // Fonction pour savoir quand la soucoupe touche les objets
+    public boolean ToucherObjet(int x, int y)
     {
         if(soucoupeX < x && x < (soucoupeX + soucoupe[0].getWidth()) && soucoupeY<y && y< (soucoupeY + soucoupe[0].getHeight()))
         {
