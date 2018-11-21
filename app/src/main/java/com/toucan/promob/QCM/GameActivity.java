@@ -1,4 +1,4 @@
-package com.toucan.promob;
+package com.toucan.promob.QCM;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +8,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+import com.toucan.promob.R;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 
 public class GameActivity extends AppCompatActivity {
@@ -36,33 +36,33 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         List <String> question1 = new ArrayList();
-        question1.add("Qui est le directeur du PNRB");
-        question1.add("Alexandre");
-        question1.add("Macron");
-        question1.add("Wolinski");
-        question1.add("Trump");
-        question1.add("Alexandre");
+        question1.add("Quel est le record de vitesse d'une fusée");
+        question1.add("40 000 km/h");
+        question1.add("30 000 km/h");
+        question1.add("50 000 km/h");
+        question1.add("20 000 km/h");
+        question1.add("40 000 km/h");
 
 
         questionreponse.add(question1);
 
         List <String> question2 = new ArrayList();
-        question2.add("Qui est l'homme le plus fort de France");
-        question2.add("Tony");
-        question2.add("Kaelig");
-        question2.add("Le Toumelin");
-        question2.add("Tibo Inshape");
-        question2.add("Tony");
+        question2.add("Quelle est la distance la plus grande parcourue par une fusée ");
+        question2.add("400 000 km");
+        question2.add("1 000 000 km");
+        question2.add("2 000 000 km");
+        question2.add("100 000 km");
+        question2.add("400 000 km");
 
         questionreponse.add(question2);
 
         List <String> question3 = new ArrayList ();
-        question3.add("Quel est le meilleur prof de maths de France");
-        question3.add("Mr Rompion");
-        question3.add("Mr Rompion");
-        question3.add("Mr Rompion");
-        question3.add("Mr Rompion");
-        question3.add("Mr Rompion");
+        question3.add("Qui est le dernier français à être aller dans l'espace");
+        question3.add("Thomas PESQUET");
+        question3.add("Jean-Loup CHRETIEN");
+        question3.add("Pierre HAIGNERE");
+        question3.add("Philippe PERRIN");
+        question3.add("Thomas PESQUET");
 
         questionreponse.add(question3);
 

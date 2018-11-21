@@ -1,4 +1,4 @@
-package com.toucan.promob;
+package com.toucan.promob.QCM;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.toucan.promob.R;
+import com.toucan.promob.ScoreActivity;
 
 public class GameActivity2 extends AppCompatActivity {
 

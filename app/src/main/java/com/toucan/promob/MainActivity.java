@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.toucan.promob.Accelerometer.Main_Activity_Accelerometer;
+import com.toucan.promob.QCM.GameActivity;
 
 public class MainActivity extends AppCompatActivity {
 
