@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondok"
+    android:background="#00374F"
     tools:context=".GameOverActivity">
 
     <TextView
@@ -17,7 +17,7 @@
         android:layout_marginTop="80dp"
         android:text="Game Over"
         android:textAlignment="center"
-        android:textColor="#F7D101"
+        android:textColor="#FFDD00"
         android:textSize="70dp"
         android:textStyle="bold" />
 
@@ -27,9 +27,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/gameOver"
         android:layout_centerHorizontal="true"
-        android:background="#F7D101"
+        android:background="#FFDD00"
         android:padding="10dp"
         android:text="Rejouer !"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/changer_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rejouer_btn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="#FFDD00"
+        android:padding="10dp"
+        android:text="Changer de jeu"
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
@@ -44,7 +59,7 @@
         android:layout_marginBottom="178dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="#F7D101"
+        android:textColor="#FFDD00"
         android:textSize="25sp"
         android:textStyle="bold" />
 

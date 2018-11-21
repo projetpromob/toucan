@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mGreetingText;
     private EditText mNameInput;
-    private Button mPlayButton;
+    //private Button mPlayButton;
 
 
     @Override
@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
         mGreetingText = (TextView) findViewById(R.id.activity_main_greeting_txt);
         mNameInput = (EditText) findViewById(R.id.activity_main_name_input);
-        mPlayButton = (Button) findViewById(R.id.activity_main_play_btn);
+        //mPlayButton = (Button) findViewById(R.id.activity_main_play_btn);
 
 
-        mPlayButton.setEnabled(false);
+        //mPlayButton.setEnabled(false);
 
-
+        /*
         mNameInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -49,26 +49,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+        */
 
-        mPlayButton.setOnClickListener(new View.OnClickListener() {
+        /*mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // The user just clicked
             }
-        });
+        });*/
     }
 
-    public void sendMovement(View view){
-        Intent startNewActivity = new Intent(this, GameMouvement.class );
-        startActivity(startNewActivity);
-    }
-    public void sendMorpion(View view){
-        Intent startNewActivity = new Intent(this, Morpion.class );
+
+    public void sendSolo(View view){
+        Intent startNewActivity = new Intent(this, ChoixJoueurSolo.class );
         startActivity(startNewActivity);
     }
 
-    public void sendPoisson(View view){
-        Intent startNewActivity = new Intent(this, PageDebSoucoupe.class );
+    public void sendMulti(View view){
+        Intent startNewActivity = new Intent(this, ChoixJoueurSolo.class );
         startActivity(startNewActivity);
     }
 }

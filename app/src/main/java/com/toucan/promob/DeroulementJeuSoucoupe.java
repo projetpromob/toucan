@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -26,17 +27,20 @@ public class DeroulementJeuSoucoupe extends View
 
     private int canvasWidth, canvasHeight;
 
-    private int homerX, homerY, homerSpeed = 10;
-    private Bitmap homer;
-    //private Paint homerPaint = new Paint();
+    private int starJX, starJY, starJSpeed = 20;
+    private Bitmap starJ;
+    //private Paint starJPaint = new Paint();
 
-    private int martienX, martienY, martienSpeed = 20;
-    //private Paint martienPaint = new Paint();
-    private Bitmap martien;
+    private int starRX, starRY, starRSpeed = 10;
+    //private Paint starRPaint = new Paint();
+    private Bitmap starR;
 
     private int meteoriteX, meteoriteY, meteoriteSpeed = 25;
     //private Paint meteoritePaint = new Paint();
     private Bitmap meteorite;
+
+    private int asteroX, asteroY, asteroSpeed = 15;
+    private Bitmap astero;
 
     private int score, lifeCounterOfSoucoupe;
 
@@ -46,6 +50,8 @@ public class DeroulementJeuSoucoupe extends View
     private Paint scorePaint = new Paint();
     private Bitmap life[] = new Bitmap[2];
 
+    MediaPlayer mediaPlayer;
+
     @SuppressLint("ResourceAsColor")
     public DeroulementJeuSoucoupe(Context context)
     {
@@ -54,20 +60,19 @@ public class DeroulementJeuSoucoupe extends View
         soucoupe[0] = BitmapFactory.decodeResource(getResources() , R.drawable.soucoupehomer);
         soucoupe[1] = BitmapFactory.decodeResource(getResources() , R.drawable.soucoupehomerrouge);
 
-        backgroundImage = BitmapFactory.decodeResource(getResources() , R.drawable.fondsimpson);
+        backgroundImage = BitmapFactory.decodeResource(getResources() , R.drawable.fondjeu);
 
-        homer = BitmapFactory.decodeResource(getResources() , R.drawable.homer);
-
-        martien = BitmapFactory.decodeResource(getResources() , R.drawable.martien);
-
-        meteorite = BitmapFactory.decodeResource(getResources() , R.drawable.meteo);
+        starJ = BitmapFactory.decodeResource(getResources() , R.drawable.star);
+        starR = BitmapFactory.decodeResource(getResources() , R.drawable.star2);
+        meteorite = BitmapFactory.decodeResource(getResources() , R.drawable.aste1);
+        astero = BitmapFactory.decodeResource(getResources() , R.drawable.aste2);
 
         scorePaint.setColor(Color.RED);
         scorePaint.setTextSize(70);
         scorePaint.setTypeface(Typeface.DEFAULT_BOLD);
         scorePaint.setAntiAlias(true);
 
-        life[0] = BitmapFactory.decodeResource(getResources() , R.drawable.hearts);
+        life[0] = BitmapFactory.decodeResource(getResources() , R.drawable.coeur);
         //life[1] = BitmapFactory.decodeResource(getResources() , R.drawable.blanc);
 
         soucoupeY = 550;
@@ -115,37 +120,46 @@ public class DeroulementJeuSoucoupe extends View
             canvas.drawBitmap(soucoupe[0], soucoupeX, soucoupeY, null);
         }
 
-        // Faire avancer homer
-        homerX = homerX - homerSpeed;
+        // Faire avancer starJ
+        starJX = starJX - starJSpeed;
 
-        if(ToucherObjet(homerX, homerY) || ToucherObjet(homerX  , homerY + homer.getHeight()))
+        if(ToucherObjet(starJX, starJY) || ToucherObjet(starJX  , starJY + starJ.getHeight()))
         {
             score = score + 20;
-            homerX = - 100;
+
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.ting);
+            mediaPlayer.start();
+
+
+            starJX = - 100;
         }
 
-        if (homerX < 0)
+        if (starJX < 0)
         {
-            homerX = canvasWidth + 21;
-            homerY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
+            starJX = canvasWidth + 21;
+            starJY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
         }
-        canvas.drawBitmap(homer , homerX , homerY , null);
+        canvas.drawBitmap(starJ , starJX , starJY , null);
 
-        martienX = martienX - martienSpeed;
+        starRX = starRX - starRSpeed;
 
-        if(ToucherObjet(martienX, martienY) || ToucherObjet(martienX , martienY + martien.getHeight()))
+        if(ToucherObjet(starRX, starRY) || ToucherObjet(starRX , starRY + starR.getHeight()))
         {
             score = score + 10;
-            martienX = - 100;
+
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.ting);
+            mediaPlayer.start();
+
+
+            starRX = - 100;
         }
 
-        if (martienX < 0)
+        if (starRX < 0)
         {
-            martienX = canvasWidth + 21;
-            martienY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
+            starRX = canvasWidth + 21;
+            starRY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
         }
-        canvas.drawBitmap(martien , martienX , martienY , null);
-
+        canvas.drawBitmap(starR , starRX , starRY , null);
 
         meteoriteX = meteoriteX - meteoriteSpeed;
 
@@ -153,6 +167,9 @@ public class DeroulementJeuSoucoupe extends View
         {
             meteoriteX = - 100;
             lifeCounterOfSoucoupe--;
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.explosion);
+            mediaPlayer.start();
+
 
             if(lifeCounterOfSoucoupe == 0)
             {
@@ -174,7 +191,36 @@ public class DeroulementJeuSoucoupe extends View
         }
         canvas.drawBitmap(meteorite , meteoriteX , meteoriteY , null);
 
-        canvas.drawText("Score : " + score, 20, 80, scorePaint );
+        asteroX = asteroX - asteroSpeed;
+
+        if(ToucherObjet(asteroX, asteroY) || ToucherObjet(asteroX , asteroY + astero.getHeight()))
+        {
+            asteroX = - 100;
+            lifeCounterOfSoucoupe--;
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.explosion);
+            mediaPlayer.start();
+
+            if(lifeCounterOfSoucoupe == 0)
+            {
+                Intent gameOverIntent = new Intent(getContext() , GameOverActivity.class);
+                gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                //Récuperation du score :
+                gameOverIntent.putExtra("scoreRecup", score);
+
+                getContext().startActivity(gameOverIntent);
+
+            }
+        }
+
+        if (asteroX < 0)
+        {
+            asteroX = canvasWidth + 21;
+            asteroY = (int) Math.floor(Math.random() * (maxSoucoupeY - minSoucoupeY)) + minSoucoupeY;
+        }
+        canvas.drawBitmap(astero , asteroX , asteroY , null);
+
+        canvas.drawText("Score : " + score, 25, 80, scorePaint );
 
         for(int i=0; i<3; i++)
         {
@@ -188,9 +234,11 @@ public class DeroulementJeuSoucoupe extends View
             }
             else
             {
-                //canvas.drawBitmap(life[1], x, y, null);
             }
         }
+
+
+
 
     }
 

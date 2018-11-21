@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoksimpson"
+    android:background="#00374F"
     tools:context=".PageDebSoucoupe">
 
 
@@ -13,14 +13,57 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Survit dans l'espace mais attention aux météorites !!!"
+        android:text="Attrapes les étoiles mais attention aux météorites !!!"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:textAlignment="center"
-        android:textColor="#F7D101"
+        android:textColor="#FFDD00"
         android:textSize="28sp"
         android:textStyle="bold"
         />
+
+    <ImageView
+        android:id="@+id/starJaune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/star"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 points !"
+        android:layout_toRightOf="@id/starJaune"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFDD00"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/starRouge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/star2"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 points !"
+        android:layout_toRightOf="@id/starRouge"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFDD00"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
+
+
 </RelativeLayout>

@@ -6,14 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/fondglobal2"
+    >
 
     <TextView
         android:id="@+id/activity_main_greeting_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFDD00"
+        android:textStyle="bold"
         android:padding="20dp"
-        android:text="Welcome! What's your name?"/>
+        android:text="Rentrez votre prénom : "
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/activity_main_name_input"
@@ -22,51 +29,44 @@
         android:layout_below="@+id/activity_main_greeting_txt"
         android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:hint="Please type your name"/>
+        android:hint="Entrer votre prénom"
+        android:textColor="#FFDD00"
+        android:textColorLink="#FFDD00"
+        android:textSize="24sp"
+        tools:hint="#FFDD00" />
 
     <Button
-        android:id="@+id/activity_main_play_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:padding="30dp"
+        android:id="@+id/multi"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
         android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/activity_main_name_input"
         android:layout_centerHorizontal="true"
-        android:text="Let's play"/>
+        android:layout_marginTop="130dp"
+        android:textColor="#FFDD00"
+        android:textSize="30sp"
+        android:text="Multijoueurs"
+        android:onClick="sendMulti"
+        />
 
     <Button
-        android:id="@+id/mv_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/solo"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="250dp"
+        android:layout_below="@+id/multi"
         android:layout_centerHorizontal="true"
-        android:onClick="sendMovement"
-        android:padding="30dp"
-        android:text="@string/btnM" />
+        android:layout_marginTop="50dp"
+        android:textColor="#FFDD00"
+        android:textSize="30sp"
+        android:text="Solo"
+        android:onClick="sendSolo"
+        />
 
-    <Button
-        android:id="@+id/mo_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="350dp"
-        android:onClick="sendMorpion"
-        android:padding="30dp"
-        android:text="Morpion !" />
-
-    <Button
-        android:id="@+id/po_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="450dp"
-        android:layout_centerHorizontal="true"
-        android:onClick="sendPoisson"
-        android:padding="30dp"
-        android:text="GO espace" />
 
 
 </RelativeLayout>

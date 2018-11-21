@@ -20,8 +20,9 @@
         <activity android:name=".GameMouvement" />
         <activity android:name=".Morpion" />
         <activity android:name=".LancementJeuSoucoupe" />
-        <activity android:name=".PageDebSoucoupe"></activity>
-        <activity android:name=".GameOverActivity"></activity>
+        <activity android:name=".PageDebSoucoupe" />
+        <activity android:name=".GameOverActivity" />
+        <activity android:name=".ChoixJoueurSolo"></activity>
     </application>
 
 </manifest>
