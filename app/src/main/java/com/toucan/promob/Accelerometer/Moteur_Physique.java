@@ -17,6 +17,7 @@ class Moteur_Physique {
 
     public void setFusee(Fusee fusee) {
         this.fusee = fusee;
+        this.fusee.reset();
     }
 
     // Les planetes
@@ -43,17 +44,15 @@ class Moteur_Physique {
                 // Pour toutes les planetes
                 for (Planete planete : planetes) {
 
-                    float milieuX = (fusee.getX() + fusee.getFusee_largeur())/2;
-                    float milieuY = (fusee.getY() + fusee.getFusee_hauteur())/2;
-
-                    String a = String.valueOf(planete.getCoordX());
+                    float milieuX = (fusee.getX() + fusee.getX() + fusee.getFusee_largeur())/2;
+                    float milieuY = (fusee.getY() + fusee.getY() +  fusee.getFusee_hauteur())/2;
 
                     //Log.i(planete.getStringType(),  String.valueOf(planete.getCoordX()) + " < " + milieuX + " < " + String.valueOf(planete.getCoordX()+ planete.getTailleX()));
                     //Log.i(planete.getStringType(),  String.valueOf(planete.getCoordY()) + " < " + milieuY + " < " + String.valueOf(planete.getCoordY() + planete.getTailleY()));
 
 
-                    if(  (planete.getCoordX() < fusee.getX()) && (planete.getCoordX() + planete.getTailleX() > fusee.getX())
-                     && (planete.getCoordY() < fusee.getY()) && (planete.getCoordY() + planete.getTailleY() > fusee.getY()) ){
+                    if(  (planete.getCoordX() < milieuX) && (planete.getCoordX() + planete.getTailleX() > milieuX)
+                     && (planete.getCoordY() < milieuY) && (planete.getCoordY() + planete.getTailleY() > milieuY) ){
 
                         // On agit différement en fonction du type de planete
                         switch (planete.getType()) {
@@ -88,6 +87,13 @@ class Moteur_Physique {
     // Remet à zéro l'emplacement de la fusee
     public void reset() {
         fusee.reset();
+
+        for (Planete planete : planetes) {
+
+            planete.reset();
+
+        }
+
     }
 
     // Arrête le capteur
@@ -103,9 +109,19 @@ class Moteur_Physique {
     // Construit le jeu
     public List<Planete> create_game() {
 
-        planetes = new ArrayList<Planete>();
+        planetes = new ArrayList<>();
 
         planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE));
+
+
+
+
+
         planetes.add(new Planete(Planete.Type.LUNE));
         planetes.add(new Planete(Planete.Type.TERRE));
 

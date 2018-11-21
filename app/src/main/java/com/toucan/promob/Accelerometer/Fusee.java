@@ -3,6 +3,7 @@ package com.toucan.promob.Accelerometer;
 
 import android.graphics.Color;
 import android.graphics.RectF;
+import android.util.Log;
 
 
 public class Fusee {
@@ -34,24 +35,17 @@ public class Fusee {
     private float mY;
 
 
-    // Couleur de la fusee
-    private int mCouleur = Color.YELLOW;
-    public int getCouleur() {
-        return mCouleur;
-    }
-
-
     public float getX() {
         return mX;
     }
 
-    public void setPosX(float pPosX) {
+    private void setPosX(float pPosX) {
         mX = pPosX;
 
         // Si la fusee sort du cadre, on rebondit
         if(mX < 0) {
             mX = 0;
-            // Rebondir, c'est changer la direction de la balle
+            // Rebondir, c'est changer la direction de la fusée
 
         } else if(mX + fusee_largeur  > mWidth ) {
             mX = mWidth - fusee_largeur;
@@ -62,7 +56,7 @@ public class Fusee {
         return mY;
     }
 
-    public void setPosY(float pPosY) {
+    private void setPosY(float pPosY) {
         mY = pPosY;
         if(mY < 0) {
             mY = 0;
@@ -73,9 +67,9 @@ public class Fusee {
     }
 
     // Taille de l'écran en hauteur
-    private int mHeight = -1;
+    private float mHeight;
 
-    public void setHeight(int pHeight) {
+    public void setHeight(float pHeight) {
         this.mHeight = pHeight;
     }
 
@@ -84,8 +78,8 @@ public class Fusee {
     }
 
     // Taille de l'écran en largeur
-    private int mWidth = -1;
-    public void setWidth(int pWidth) {
+    private float mWidth;
+    public void setWidth(float pWidth) {
         this.mWidth = pWidth;
     }
 
@@ -103,14 +97,12 @@ public class Fusee {
         setPosX(mX - pX);
         setPosY(mY + pY);
 
-        // Met à jour les coordonnées du rectangle de collision
-        //mRectangle.set(mX - pX , mY + pY, mX - pX + fusee_largeur, mY + pY + fusee_hauteur);
     }
 
     // Remet la fusee à sa position de départ
     public void reset() {
 
-        this.mX = this.getWidth()/2;
+        this.mX = this.getWidth()/2 - this.getFusee_largeur()/2;
         this.mY = this.getHeight();
     }
 }

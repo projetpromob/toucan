@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.List;
 
@@ -13,6 +14,11 @@ public class Main_Activity_Accelerometer extends Activity {
     public static final int VICTORY_DIALOG = 0;
     // Identifiant de la boîte de dialogue de défaite
     public static final int DEFEAT_DIALOG = 1;
+
+    private long chrono_debut;
+    private long chrono_fin;
+
+    private float time;
 
     // Le moteur graphique du jeu
     private Moteur_Graphique mView = null;
@@ -26,20 +32,28 @@ public class Main_Activity_Accelerometer extends Activity {
         Fusee b = new Fusee();
 
         mView = new Moteur_Graphique(this);
-        setContentView(mView);
+        mView.setFusee(b);
 
         mEngine = new Moteur_Physique(this);
 
-        mView.setFusee(b);
         mEngine.setFusee(b);
+
+        setContentView(mView);
 
         List<Planete> mList = mEngine.create_game();
         mView.setPlanetes(mList);
+
+        chrono_debut = new java.util.Date().getTime();
+
+
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        chrono_debut = new java.util.Date().getTime();
+
         mEngine.resume();
     }
 
@@ -52,11 +66,24 @@ public class Main_Activity_Accelerometer extends Activity {
     @Override
     public Dialog onCreateDialog (int id) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        chrono_fin = new java.util.Date().getTime() ;
+        time = chrono_fin - chrono_debut;
+
+        float result_time = time/1000;
+
+        Integer score_time = (int) (long) ((1/result_time)*100);
+
+
+        Log.i("DEBUG", String.valueOf(score_time));
+
+
+
         switch(id) {
             case VICTORY_DIALOG:
                 builder.setCancelable(false)
-                        .setMessage("Bravo, vous avez gagné !")
-                        .setTitle("Champion ! Le roi des Zörglubienotchs est mort grâce à vous !")
+                        .setMessage("Gagné !")
+                        .setTitle("Votre fusée vient d'atterir")
                         .setNeutralButton("Recommencer", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -69,8 +96,8 @@ public class Main_Activity_Accelerometer extends Activity {
 
             case DEFEAT_DIALOG:
                 builder.setCancelable(false)
-                        .setMessage("La Terre a été détruite à cause de vos erreurs.")
-                        .setTitle("Bah bravo !")
+                        .setMessage("Vous avez explosé votre fusée")
+                        .setTitle(" Perdu !")
                         .setNeutralButton("Recommencer", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -85,6 +112,7 @@ public class Main_Activity_Accelerometer extends Activity {
     @Override
     public void onPrepareDialog (int id, Dialog box) {
         // A chaque fois qu'une boîte de dialogue est lancée, on arrête le moteur physique
-        mEngine.stop();
+
+            mEngine.stop();
     }
 }

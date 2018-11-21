@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
+
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -18,8 +18,13 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
 
     Fusee fusee;
 
+    Bitmap bitmapfusee = BitmapFactory.decodeResource( getResources(), R.drawable.fusee_tintin);
+
+
     public void setFusee(Fusee pFusee) {
         this.fusee = pFusee;
+        fusee.setFusee_largeur(bitmapfusee.getWidth());
+        fusee.setFusee_hauteur(bitmapfusee.getHeight());
     }
 
     SurfaceHolder mSurfaceHolder;
@@ -27,38 +32,35 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
 
     private List<Planete> planetes = null;
 
-
-
     public void setPlanetes(List<Planete> planetes) {
         this.planetes = planetes;
     }
-
-    Paint mPaint;
 
     public Moteur_Graphique(Context pContext) {
         super(pContext);
         mSurfaceHolder = getHolder();
         mSurfaceHolder.addCallback(this);
         mThread = new DrawingThread();
-
-        mPaint = new Paint();
-        mPaint.setStyle(Paint.Style.FILL);
-
         fusee = new Fusee();
+        fusee.reset();
+
     }
 
     @Override
     protected void onDraw(Canvas pCanvas) {
         // Dessiner le fond de l'écran en premier
-        pCanvas.drawColor(Color.BLACK);
+        Bitmap background = BitmapFactory.decodeResource( getResources(), R.drawable.background);
+
+        pCanvas.drawBitmap(background,0,0,null);
+
         if(planetes != null) {
             // Dessiner tous les blocs du labyrinthe
             for(Planete b : planetes) {
                 switch(b.getType()) {
                     case LUNE:
                         Bitmap lune = BitmapFactory.decodeResource( getResources(), R.drawable.moon);
-                        pCanvas.drawBitmap(lune, fusee.getWidth()*0.5f, fusee.getHeight()*0.1f, null);
-                        b.setCoordX(fusee.getWidth()*0.5f);
+                        pCanvas.drawBitmap(lune, fusee.getWidth()*b.getRandomx1(), fusee.getHeight()*0.1f, null);
+                        b.setCoordX(fusee.getWidth()*b.getRandomx1());
                         b.setCoordY(fusee.getHeight()*0.1f);
                         b.setTailleX(lune.getWidth());
                         b.setTailleY(lune.getHeight());
@@ -68,21 +70,23 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
                     case METEORITE:
                         Bitmap meteorite = BitmapFactory.decodeResource( getResources(), R.drawable.meteor);
 
-
-                        float x1 = (float) (Math.random()*0.5f)+0.3f;
-                        float y1 = (float) (Math.random()*0.5f)+0.3f;
-
-                        pCanvas.drawBitmap(meteorite, fusee.getWidth()*x1, fusee.getHeight()*y1, null);
+                        pCanvas.drawBitmap(meteorite, fusee.getWidth()*b.getRandomx1(), fusee.getHeight()*b.getRandomy1(), null);
 
 
-                        b.setCoordX(fusee.getWidth()*x1);
-                        b.setCoordY(fusee.getHeight()*y1);
+                        b.setCoordX(fusee.getWidth()*b.getRandomx1());
+                        b.setCoordY(fusee.getHeight()*b.getRandomy1());
                         b.setTailleX(meteorite.getWidth());
                         b.setTailleY(meteorite.getHeight());
                         break;
 
                     case TERRE:
-                        mPaint.setColor(Color.BLUE);
+
+                        Bitmap earth = BitmapFactory.decodeResource(getResources(), R.drawable.earth);
+
+                        pCanvas.drawBitmap(earth, (getWidth()/2)-(earth.getWidth()/2), getHeight()-earth.getHeight(), null);
+
+
+
                         break;
                 }
 
@@ -91,9 +95,7 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
 
         // Dessiner la Fusee
         if(fusee != null) {
-            Bitmap bitmapfusee = BitmapFactory.decodeResource( getResources(), R.drawable.fusee_tintin);
-            fusee.setFusee_largeur(bitmapfusee.getWidth());
-            fusee.setFusee_hauteur(bitmapfusee.getHeight());
+            //Log.i("DEBUG",  String.valueOf(fusee.getWidth()) + " |-| " + String.valueOf(fusee.getHeight()));
 
             pCanvas.drawBitmap(bitmapfusee, fusee.getX(), fusee.getY(), null);
         }
@@ -106,13 +108,18 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
 
     @Override
     public void surfaceCreated(SurfaceHolder pHolder) {
-        mThread.keepDrawing = true;
-        mThread.start();
-        // Quand on crée la Fusee, on lui indique les coordonnées de l'écran
+
         if(fusee != null ) {
             this.fusee.setHeight(getHeight());
             this.fusee.setWidth(getWidth());
+
+            this.fusee.reset();
         }
+
+        mThread.keepDrawing = true;
+        mThread.start();
+        // Quand on crée la Fusee, on lui indique les coordonnées de l'écran
+
     }
 
     @Override
@@ -148,9 +155,8 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
                         mSurfaceHolder.unlockCanvasAndPost(canvas);
                 }
 
-                // Pour dessiner à 50 fps
                 try {
-                    Thread.sleep(20);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {}
             }
         }

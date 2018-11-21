@@ -7,15 +7,39 @@ public class Planete {
     enum  Type { LUNE, METEORITE, TERRE };
 
     private Type mType = null;
-    private RectF mRectangle = null;
-
-    private Bitmap bitmapPlanete;
 
     private float coordX;
     private float coordY;
 
     private float tailleX;
     private float tailleY;
+
+    private float randomx1 = (float) (Math.random()*0.8f)+0.1f;
+    private float randomy1 = (float) (Math.random()*0.5f)+0.2f;
+
+    private void setRandomx1(){
+
+        randomx1 = (float) (Math.random()*0.5f)+0.3f;
+
+    }
+
+    private void setRandomy1(){
+
+        randomy1 = (float) (Math.random()*0.5f)+0.2f;
+
+    }
+
+    public float getRandomx1(){
+
+        return randomx1;
+
+    }
+
+    public float getRandomy1(){
+
+        return randomy1;
+
+    }
 
     public void setCoordX(float x){
         coordX = x;
@@ -63,11 +87,14 @@ public class Planete {
         return mType.toString();
     }
 
+    public void reset(){
+
+        this.setRandomx1();
+        this.setRandomy1();
 
 
-    public RectF getRectangle() {
-        return mRectangle;
     }
+
 
     public Planete(Type pType) {
         this.mType = pType;
