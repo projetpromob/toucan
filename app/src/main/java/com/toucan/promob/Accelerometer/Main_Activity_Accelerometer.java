@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.toucan.promob.MainActivity;
+import com.toucan.promob.QCM.GameActivity;
 
 import java.util.List;
 
@@ -74,6 +78,8 @@ public class Main_Activity_Accelerometer extends Activity {
 
         Integer score_time = (int) (long) ((1/result_time)*100);
 
+        Integer final_time = (score_time * score_time)*2 ;
+
 
         Log.i("DEBUG", String.valueOf(score_time));
 
@@ -82,14 +88,16 @@ public class Main_Activity_Accelerometer extends Activity {
         switch(id) {
             case VICTORY_DIALOG:
                 builder.setCancelable(false)
-                        .setMessage("Gagné !")
-                        .setTitle("Votre fusée vient d'atterir")
-                        .setNeutralButton("Recommencer", new DialogInterface.OnClickListener() {
+                        .setMessage("Votre fusée vient d'atterir ! \nScore : " + final_time)
+                        .setTitle("Gagné")
+                        .setNeutralButton("Suivant", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // L'utilisateur peut recommencer s'il le veut
-                                mEngine.reset();
-                                mEngine.resume();
+                                Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
+                                startActivity(gameActivity);
+
+
                             }
                         });
                 break;

@@ -115,8 +115,6 @@ class Moteur_Physique {
         planetes.add(new Planete(Planete.Type.METEORITE));
         planetes.add(new Planete(Planete.Type.METEORITE));
         planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
 
 
 
