@@ -49,10 +49,9 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
     @Override
     protected void onDraw(Canvas pCanvas) {
         // Dessiner le fond de l'écran en premier
-        Bitmap background = BitmapFactory.decodeResource( getResources(), R.drawable.background);
-
-        pCanvas.drawBitmap(background,0,0,null);
-
+        //Bitmap background = BitmapFactory.decodeResource( getResources(), R.drawable.background);
+        pCanvas.drawColor(Color.BLACK);
+        //pCanvas.drawBitmap(background,0,0,null);
         if(planetes != null) {
             // Dessiner tous les blocs du labyrinthe
             for(Planete b : planetes) {

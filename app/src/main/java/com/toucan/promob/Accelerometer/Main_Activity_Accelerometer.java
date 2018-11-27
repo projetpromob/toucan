@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.toucan.promob.MainActivity_PD;
+import com.toucan.promob.MainActivity;
 
 import java.util.List;
 
@@ -93,7 +93,7 @@ public class Main_Activity_Accelerometer extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // L'utilisateur peut recommencer s'il le veut
-                                Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity_PD.class);
+                                Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
                                 startActivity(gameActivity);
 
 

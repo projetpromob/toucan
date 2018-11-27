@@ -111,10 +111,10 @@ class Moteur_Physique {
 
         planetes = new ArrayList<>();
 
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
 
 
 
