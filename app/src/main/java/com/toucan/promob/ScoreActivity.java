@@ -30,7 +30,7 @@ public class ScoreActivity extends AppCompatActivity {
         retry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Main = new Intent(ScoreActivity.this, MainActivity.class);
+                Intent Main = new Intent(ScoreActivity.this, MainActivity_PD.class);
                 Main.putExtra("best",score);
                 startActivity(Main);
             }

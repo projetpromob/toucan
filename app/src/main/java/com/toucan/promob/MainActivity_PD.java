@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.toucan.promob.Accelerometer.Main_Activity_Accelerometer;
 import com.toucan.promob.QCM.GameActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_PD extends AppCompatActivity {
 
     private TextView mGreetingText;
     private EditText mNameInput;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_PD);
 
         mGreetingText = (TextView) findViewById(R.id.activity_main_greeting_txt);
         mNameInput = (EditText) findViewById(R.id.activity_main_name_input);
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent gameActivity = new Intent(MainActivity.this, GameActivity.class);
+                Intent gameActivity = new Intent(MainActivity_PD.this, GameActivity.class);
                 startActivity(gameActivity);
 
             }
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent gameActivity = new Intent(MainActivity.this, Main_Activity_Accelerometer.class);
+                Intent gameActivity = new Intent(MainActivity_PD.this, Main_Activity_Accelerometer.class);
                 startActivity(gameActivity);
 
             }
