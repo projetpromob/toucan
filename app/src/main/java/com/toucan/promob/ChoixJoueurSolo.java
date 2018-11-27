@@ -6,16 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.toucan.promob.Accelerometer.Main_Activity_Accelerometer;
+import com.toucan.promob.Accelerometer.PageDebAccelerometer;
 import com.toucan.promob.Jeu_touch.PageDebSoucoupe;
+import com.toucan.promob.QCM.GameActivity;
 
 
         public class ChoixJoueurSolo extends AppCompatActivity {
 
 
     private Button jeuTouch;
-    //private Button jeuAcce;
+    private Button jeuAcce;
     private Button morpion;
-    //private Button quizz;
+    private Button quizz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +26,9 @@ import com.toucan.promob.Jeu_touch.PageDebSoucoupe;
         setContentView(R.layout.activity_choix_joueur_solo);
 
         jeuTouch = (Button) findViewById(R.id.jeuTouch);
-        //jeuAcce = (Button) findViewById(R.id.jeuAccelerometre);
+        jeuAcce = (Button) findViewById(R.id.jeuAccelerometre);
         morpion = (Button) findViewById(R.id.jeuMorpion);
-        //quizz = (Button) findViewById(R.id.jeuQuizz);
+        quizz = (Button) findViewById(R.id.jeuQuizz);
 
         //jeuTouch.setEnabled(false);
         jeuTouch.setOnClickListener(new View.OnClickListener() {
@@ -39,16 +42,16 @@ import com.toucan.promob.Jeu_touch.PageDebSoucoupe;
         });
 
 
-        // Envoi vers jeu accelerometre :
-        //jeuAcce.setOnClickListener(new View.OnClickListener() {
+         //Envoi vers jeu accelerometre :
+        jeuAcce.setOnClickListener(new View.OnClickListener() {
 
-          //  @Override
-            //public void onClick(View v) {
-              //  Intent gameActivity = new Intent(ChoixJoueurSolo.this , Main_Activity_Accelerometer.class);
-            //    startActivity(gameActivity);
-          //  }
+            @Override
+            public void onClick(View v) {
+                Intent gameActivity = new Intent(ChoixJoueurSolo.this , PageDebAccelerometer.class);
+                startActivity(gameActivity);
+            }
 
-        //});
+        });
 
         morpion.setOnClickListener(new View.OnClickListener() {
 
@@ -59,14 +62,14 @@ import com.toucan.promob.Jeu_touch.PageDebSoucoupe;
             }
         });
 
-        //quizz.setOnClickListener(new View.OnClickListener() {
+        quizz.setOnClickListener(new View.OnClickListener() {
 
-          //  @Override
-          //  public void onClick(View v) {
-          //      Intent gameActivity = new Intent(ChoixJoueurSolo.this , Quizz.class);
-          //      startActivity(gameActivity);
-          //  }
-        //});
+            @Override
+            public void onClick(View v) {
+                Intent gameActivity = new Intent(ChoixJoueurSolo.this , GameActivity.class);
+                startActivity(gameActivity);
+            }
+        });
 
     }
     }

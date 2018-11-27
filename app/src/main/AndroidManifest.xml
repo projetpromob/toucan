@@ -30,7 +30,8 @@
         <activity android:name=".Accelerometer.Planete" />
         <activity android:name=".QCM.GameActivity" />
         <activity android:name=".QCM.GameActivity2" />
-        <activity android:name=".MainActivity_PD"></activity>
+        <activity android:name=".MainActivity_PD" />
+        <activity android:name=".Accelerometer.PageDebAccelerometer"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00374F"
+    tools:context=".Accelerometer.PageDebAccelerometer">
+
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Poses la fusée sur la lune, mais Attention aux météorites !!!"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:textColor="#FFDD00"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moins tu mettras de temps plus tu gagneras de points !"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#FFDD00"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
+
+
+</RelativeLayout>
