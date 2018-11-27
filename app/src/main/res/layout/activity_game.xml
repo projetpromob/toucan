@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QCM.GameActivity">
+
+    <TextView
+        android:id="@+id/activity_game_question_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Question"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/activity_game_answer1_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:text="Reponse 1"
+        android:textAllCaps="false"
+        android:textColor="#FFDD00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/activity_game_answer2_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:text="Reponse 2"
+        android:textAllCaps="false"
+
+        android:textColor="#FFDD00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/activity_game_answer3_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:text="Reponse 3"
+        android:textAllCaps="false"
+        android:textColor="#FFDD00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/activity_game_answer4_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:text="Reponse 4"
+        android:textAllCaps="false"
+        android:textColor="#FFDD00"
+        android:textSize="30sp" />
+
+</LinearLayout>
