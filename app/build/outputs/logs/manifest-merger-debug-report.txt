@@ -1,0 +1,172 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\62399f66cd23887fbeb488793aff6ceb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3795cda42df9151ec05a49c429739117\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\1400400e391322ede2971b1714d9ac71\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\c897affa800b1be00231654500131700\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\933b836d2b23cfa6e7ade9cc593dd929\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d9ff11a32580497b9593ed47360e0018\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\163cb37e61d328e55e91af83bd1d37b6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\4dc9800fa66fed66155f91e3f956ff2f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\44f6a296c6f55ca4bec822b82bfd2da6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\79f7a91e75e3012961af74f2c9c1f585\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\084f0686a7569c03b20bcb84caf7c7dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\0326d91adf5c6811ec7545764271f255\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\a940385954d3075316190a2b84a8302b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\c922a818221fb6a1dfb30196eff859f0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\fc861cb85b1a46641d675d28132cbe84\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b64a1b4d1dccca9bdf825c2043b41b97\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\57a921eec461a7a954b94a215d976a06\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\73059e7e1ff8ed443316cac705a7a45c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\742331fd13749a1462a043a826e38e41\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\c9b7d876eae40539db29fcab10cb0e9f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\379e9344dd6fe0636696f2be7484514e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\b3bff09e82a325d5f7a51652860ad337\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\6844210964644734a5d7565a87fe9b1e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\f157523c201417ef01d4009e485b391a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\4158d2662666c2ac86db34db92001168\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9f280d72025e17f8c1a1b7baa8c40745\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\c16b6f26b2132bb282fe54d79a1a887f\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:3:5-32
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:5:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3795cda42df9151ec05a49c429739117\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3795cda42df9151ec05a49c429739117\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b64a1b4d1dccca9bdf825c2043b41b97\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b64a1b4d1dccca9bdf825c2043b41b97\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\57a921eec461a7a954b94a215d976a06\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\57a921eec461a7a954b94a215d976a06\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b64a1b4d1dccca9bdf825c2043b41b97\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.toucan.promob.MainActivity
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.toucan.promob.QCM.GameActivity
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:19:9-54
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:19:19-51
+activity#com.toucan.promob.QCM.GameActivity2
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:20:9-55
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:20:19-52
+activity#com.toucan.promob.ScoreActivity
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:21:9-51
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:21:19-48
+activity#com.toucan.promob.Accelerometer.Main_Activity_Accelerometer
+ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:22:9-23:20
+	android:screenOrientation
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:22:77-113
+	android:name
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml:22:19-76
+uses-sdk
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\62399f66cd23887fbeb488793aff6ceb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\62399f66cd23887fbeb488793aff6ceb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3795cda42df9151ec05a49c429739117\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3795cda42df9151ec05a49c429739117\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\1400400e391322ede2971b1714d9ac71\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\1400400e391322ede2971b1714d9ac71\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\c897affa800b1be00231654500131700\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\c897affa800b1be00231654500131700\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\933b836d2b23cfa6e7ade9cc593dd929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\933b836d2b23cfa6e7ade9cc593dd929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d9ff11a32580497b9593ed47360e0018\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d9ff11a32580497b9593ed47360e0018\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\163cb37e61d328e55e91af83bd1d37b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\163cb37e61d328e55e91af83bd1d37b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\4dc9800fa66fed66155f91e3f956ff2f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\4dc9800fa66fed66155f91e3f956ff2f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\44f6a296c6f55ca4bec822b82bfd2da6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\44f6a296c6f55ca4bec822b82bfd2da6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\79f7a91e75e3012961af74f2c9c1f585\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\79f7a91e75e3012961af74f2c9c1f585\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\084f0686a7569c03b20bcb84caf7c7dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\084f0686a7569c03b20bcb84caf7c7dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\0326d91adf5c6811ec7545764271f255\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\0326d91adf5c6811ec7545764271f255\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\a940385954d3075316190a2b84a8302b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\a940385954d3075316190a2b84a8302b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\c922a818221fb6a1dfb30196eff859f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\c922a818221fb6a1dfb30196eff859f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\fc861cb85b1a46641d675d28132cbe84\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\fc861cb85b1a46641d675d28132cbe84\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b64a1b4d1dccca9bdf825c2043b41b97\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b64a1b4d1dccca9bdf825c2043b41b97\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\57a921eec461a7a954b94a215d976a06\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\57a921eec461a7a954b94a215d976a06\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\73059e7e1ff8ed443316cac705a7a45c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\73059e7e1ff8ed443316cac705a7a45c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\742331fd13749a1462a043a826e38e41\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\742331fd13749a1462a043a826e38e41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\c9b7d876eae40539db29fcab10cb0e9f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\c9b7d876eae40539db29fcab10cb0e9f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\379e9344dd6fe0636696f2be7484514e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\379e9344dd6fe0636696f2be7484514e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\b3bff09e82a325d5f7a51652860ad337\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\b3bff09e82a325d5f7a51652860ad337\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\6844210964644734a5d7565a87fe9b1e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\6844210964644734a5d7565a87fe9b1e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\f157523c201417ef01d4009e485b391a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\f157523c201417ef01d4009e485b391a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\4158d2662666c2ac86db34db92001168\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\4158d2662666c2ac86db34db92001168\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9f280d72025e17f8c1a1b7baa8c40745\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9f280d72025e17f8c1a1b7baa8c40745\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\c16b6f26b2132bb282fe54d79a1a887f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Pierre-Damien\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\c16b6f26b2132bb282fe54d79a1a887f\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Pierre-Damien\Documents\ESIR\ESIR2\PROMOB\Projet\toucan\app\src\main\AndroidManifest.xml
