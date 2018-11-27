@@ -16,12 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity" />
-        <activity android:name=".GameMouvement" />
+        <activity android:name=".Dev_test.GameMouvement" />
         <activity android:name=".Morpion" />
-        <activity android:name=".LancementJeuSoucoupe" />
-        <activity android:name=".PageDebSoucoupe" />
-        <activity android:name=".GameOverActivity" />
+        <activity android:name=".Jeu_touch.LancementJeuSoucoupe" />
+        <activity android:name=".Jeu_touch.PageDebSoucoupe" />
+        <activity android:name=".Jeu_touch.GameOverActivity" />
         <activity android:name=".ChoixJoueurSolo"></activity>
     </application>
 

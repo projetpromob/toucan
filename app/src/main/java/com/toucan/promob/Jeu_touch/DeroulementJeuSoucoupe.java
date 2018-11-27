@@ -1,4 +1,4 @@
-package com.toucan.promob;
+package com.toucan.promob.Jeu_touch;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,7 +12,8 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
+
+import com.toucan.promob.R;
 
 
 public class DeroulementJeuSoucoupe extends View

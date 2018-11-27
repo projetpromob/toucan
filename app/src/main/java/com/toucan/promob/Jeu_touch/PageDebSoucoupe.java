@@ -1,8 +1,10 @@
-package com.toucan.promob;
+package com.toucan.promob.Jeu_touch;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.toucan.promob.R;
 
 public class PageDebSoucoupe extends AppCompatActivity {
 

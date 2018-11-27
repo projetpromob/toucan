@@ -1,9 +1,11 @@
-package com.toucan.promob;
+package com.toucan.promob.Jeu_touch;
 
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.toucan.promob.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
