@@ -8,21 +8,19 @@
     tools:context=".Jeu_touch.PageDebSoucoupe">
 
 
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Attrapes les étoiles mais attention aux météorites !!!"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="100dp"
+        android:text="Attrapes les étoiles mais attention aux météorites !!!"
         android:textAlignment="center"
-        android:textColor="#FFDD00"
+        android:textColor="#FFFFFF"
         android:textSize="28sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/starJaune"

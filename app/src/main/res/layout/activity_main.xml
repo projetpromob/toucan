@@ -31,11 +31,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
         android:hint="Entrer votre prénom"
-        android:textColor="#FFDD00"
-        android:textColorLink="#FFDD00"
-        android:textSize="24sp"
-        tools:hint="#FFDD00" />
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#000000"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/multi"

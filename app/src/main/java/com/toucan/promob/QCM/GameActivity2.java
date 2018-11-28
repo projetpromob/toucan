@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.toucan.promob.ChoixJoueurSolo;
+import com.toucan.promob.MainActivity;
 import com.toucan.promob.R;
 import com.toucan.promob.ScoreActivity;
 
@@ -63,6 +65,14 @@ public class GameActivity2 extends AppCompatActivity {
 
 
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent Activity = new Intent(GameActivity2.this, ChoixJoueurSolo.class);
+        startActivity(Activity);
 
     }
 }

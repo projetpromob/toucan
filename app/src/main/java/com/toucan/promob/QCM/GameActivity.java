@@ -8,7 +8,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+import com.toucan.promob.ChoixJoueurSolo;
+import com.toucan.promob.MainActivity;
 import com.toucan.promob.R;
+import com.toucan.promob.ScoreActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -202,6 +205,15 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+        Intent Activity = new Intent(GameActivity.this, ChoixJoueurSolo.class);
+        startActivity(Activity);
 
     }
 }

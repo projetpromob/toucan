@@ -14,18 +14,19 @@ public class Planete {
     private float tailleX;
     private float tailleY;
 
-    private float randomx1 = (float) (Math.random()*0.8f)+0.1f;
-    private float randomy1 = (float) (Math.random()*0.5f)+0.2f;
+    private float randomx1 = (float) (Math.random()*(0.8f));
+    private float randomy1;
+    //private float randomy1 = (float) (Math.random()*0.5f)+0.2f;
 
     private void setRandomx1(){
 
-        randomx1 = (float) (Math.random()*0.5f)+0.3f;
+        randomx1 = (float) (Math.random()*0.8f);
 
     }
 
     private void setRandomy1(){
 
-        randomy1 = (float) (Math.random()*0.5f)+0.2f;
+        randomy1 = (float) (Math.random()*0.7f);
 
     }
 
@@ -90,11 +91,14 @@ public class Planete {
     public void reset(){
 
         this.setRandomx1();
-        this.setRandomy1();
-
 
     }
 
+
+    public Planete(Type pType, float y) {
+        this.mType = pType;
+        this.randomy1 = y;
+    }
 
     public Planete(Type pType) {
         this.mType = pType;
