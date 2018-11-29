@@ -1,10 +1,12 @@
 package promob.gospace.Accelerometer;
 
 import android.app.Service;
+import android.graphics.RectF;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,10 +111,10 @@ class Moteur_Physique {
 
         planetes = new ArrayList<>();
 
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
-        planetes.add(new Planete(Planete.Type.METEORITE));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+        planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
 
 
 
