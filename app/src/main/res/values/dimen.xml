@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+// Dimension des Widgets du morpion :
+    //largeur de la ligne :
+    <dimen name="width_line">5dp</dimen>
+    //taille des boutons :
+    <dimen name="size_button">80dp</dimen>
+    // marge entre le morpion et le texte dessous
+    <dimen name="margin_tv">20dp</dimen>
+</resources>
