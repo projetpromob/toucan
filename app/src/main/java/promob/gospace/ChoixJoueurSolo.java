@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.VideoView;
 
 import promob.gospace.Jeu_touch.PageDebSoucoupe;
 import promob.gospace.QCM.GameActivity;
@@ -19,6 +20,7 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
     private Button morpion;
     private Button quizz;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,7 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
         jeuAcce = (Button) findViewById(R.id.jeuAccelerometre);
         morpion = (Button) findViewById(R.id.jeuMorpion);
         quizz = (Button) findViewById(R.id.jeuQuizz);
+
 
         //jeuTouch.setEnabled(false);
         jeuTouch.setOnClickListener(new View.OnClickListener() {
