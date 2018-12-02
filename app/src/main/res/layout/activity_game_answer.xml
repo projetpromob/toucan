@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,21 +9,32 @@
 
     <TextView
         android:id="@+id/textResultatQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
-        android:text="Bonne reponse"
-        android:textSize="50sp" ></TextView>
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginRight="71dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/buttonshape"
+        android:text="Reponse"
+        android:textAlignment="center"
+        android:textColor="#FFDD00"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/activity_game_answer_suivant"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:layout_weight="1"
+        android:layout_height="90dp"
         android:background="@android:color/white"
+        android:layout_below="@+id/textResultatQuestion"
         android:text="SUIVANT"
         android:textColor="#093F63"
         android:textSize="20sp" />
 
-</LinearLayout>
+    </RelativeLayout>
+
+
+
