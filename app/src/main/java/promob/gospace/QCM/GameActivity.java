@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 import java.util.ArrayList;
@@ -203,5 +204,14 @@ public class GameActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(GameActivity.this, MainActivity.class);
+        startActivity(gameActivity);
+        this.onStop();
     }
 }
