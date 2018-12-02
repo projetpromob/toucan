@@ -70,7 +70,6 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
 
                         pCanvas.drawBitmap(meteorite, fusee.getWidth()*b.getRandomx1(), fusee.getHeight()*b.getRandomy1(), null);
 
-
                         b.setCoordX(fusee.getWidth()*b.getRandomx1());
                         b.setCoordY(fusee.getHeight()*b.getRandomy1());
                         b.setTailleX(meteorite.getWidth());

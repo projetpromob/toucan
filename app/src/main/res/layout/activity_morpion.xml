@@ -9,6 +9,9 @@
     android:gravity="center"
     >
 
+
+    
+
     // Boutons de la première ligne :
 
     <Button
@@ -152,5 +155,6 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/joueur"
         />
+
 
 </RelativeLayout>

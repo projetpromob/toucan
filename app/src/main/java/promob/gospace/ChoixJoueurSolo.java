@@ -1,10 +1,12 @@
 package promob.gospace;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import promob.gospace.Jeu_touch.PageDebSoucoupe;
@@ -20,6 +22,9 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
     private Button morpion;
     private Button quizz;
 
+    private VideoView video;
+    private VideoView video2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,18 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
         jeuAcce = (Button) findViewById(R.id.jeuAccelerometre);
         morpion = (Button) findViewById(R.id.jeuMorpion);
         quizz = (Button) findViewById(R.id.jeuQuizz);
+
+        video = (VideoView) findViewById(R.id.videoView);
+        String videopath = "android.resource://" + getPackageName() + "/" + R.raw.videotouch;
+        Uri uri = Uri.parse(videopath);
+        video.setVideoURI(uri);
+        video.start();
+
+        video2 = (VideoView) findViewById(R.id.videoView2);
+        String videopath2 = "android.resource://" + getPackageName() + "/" + R.raw.videoacce;
+        Uri uri2 = Uri.parse(videopath2);
+        video2.setVideoURI(uri2);
+        video2.start();
 
 
         //jeuTouch.setEnabled(false);
