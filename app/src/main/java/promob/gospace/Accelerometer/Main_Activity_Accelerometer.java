@@ -77,7 +77,7 @@ public class Main_Activity_Accelerometer extends Activity {
 
         Integer score_time = (int) (long) ((1/result_time)*100);
 
-        Integer final_time = (score_time * score_time)*2 ;
+        final Integer final_time = (score_time * score_time)*2 ;
 
         /*
         Intent gameOverIntent = new Intent(getContext() , GameOverActivity.class);
@@ -100,7 +100,8 @@ public class Main_Activity_Accelerometer extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // L'utilisateur peut recommencer s'il le veut
-                                Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
+                                Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, GameOverActivity_Acce.class);
+                                gameActivity.putExtra("scoreRecupA",final_time);
                                 startActivity(gameActivity);
 
 
