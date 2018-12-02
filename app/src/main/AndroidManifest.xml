@@ -27,7 +27,8 @@
         <activity android:name=".QCM.GameActivity" />
         <activity android:name=".QCM.GameActivity2" />
         <activity android:name=".Accelerometer.PageDebAccelerometer" />
-        <activity android:name=".GameOverActivityMorpion"></activity>
+        <activity android:name=".GameOverActivityMorpion" />
+        <activity android:name=".Pilotage.JeuPilotage"></activity>
     </application>
 
 </manifest>
