@@ -1,6 +1,7 @@
 package promob.gospace;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import promob.gospace.Jeu_touch.GameOverActivity;
 
 public class Morpion extends AppCompatActivity implements View.OnClickListener {
 
@@ -185,13 +188,19 @@ public class Morpion extends AppCompatActivity implements View.OnClickListener {
 
         String strToDisplay = "";
         if (res == 1)
-            strToDisplay = "Les X ont gagnées !";
+            strToDisplay = "Les X ont gagnés !";
         if (res == 2)
             strToDisplay = "Les O ont gagnés !";
         if (res == 3)
             strToDisplay = "Egalité !";
 
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+
+        Intent gameOverIntent = new Intent(this , GameOverActivityMorpion.class);
+        gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        gameOverIntent.putExtra("gagnant", strToDisplay);
+        startActivity(gameOverIntent);
+
+        /*AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("Fin de la partie");
         alertDialog.setMessage(strToDisplay);
 
@@ -202,11 +211,12 @@ public class Morpion extends AppCompatActivity implements View.OnClickListener {
             }
         });
         alertDialog.setCancelable(false);
-        alertDialog.show();
+        alertDialog.show();*/
+
 
     }
 
-    private void resetGame(){
+    /*private void resetGame(){
 
         for (int col = 0; col <= 2; col++) {
             for (int line = 0; line <= 2; line++) {
@@ -218,4 +228,5 @@ public class Morpion extends AppCompatActivity implements View.OnClickListener {
             bt.setBackgroundDrawable(null);
         }
     }
+    */
 }
