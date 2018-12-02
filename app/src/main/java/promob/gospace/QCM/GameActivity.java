@@ -60,7 +60,7 @@ public class GameActivity extends AppCompatActivity {
         List <String> question3 = new ArrayList ();
         question3.add("Qui est le dernier français à être aller dans l'espace");
         question3.add("Thomas PESQUET");
-        question3.add("Jean-Loup CHRETIEN");
+        question3.add("Claudie HAIGNERE");
         question3.add("Pierre HAIGNERE");
         question3.add("Philippe PERRIN");
         question3.add("Thomas PESQUET");
