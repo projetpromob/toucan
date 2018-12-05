@@ -30,7 +30,8 @@
         <activity android:name=".GameOverActivityMorpion" />
         <activity android:name=".Pilotage.JeuPilotage" />
         <activity android:name=".Pilotage.LancementJeuPilotage" />
-        <activity android:name=".Pilotage.PageDebPilotage"></activity>
+        <activity android:name=".Pilotage.PageDebPilotage" />
+        <activity android:name=".Tape.JeuTape"></activity>
     </application>
 
 </manifest>
