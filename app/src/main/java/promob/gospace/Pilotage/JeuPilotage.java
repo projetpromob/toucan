@@ -1,7 +1,10 @@
 package promob.gospace.Pilotage;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -16,7 +19,7 @@ import java.util.ArrayList;
 import promob.gospace.Jeu_touch.GameOverActivity;
 import promob.gospace.R;
 
-public class JeuPilotage extends AppCompatActivity implements View.OnClickListener {
+public class JeuPilotage extends View {
 
     //Tableau a deux dimensions
     //plateau[colonne][ligne]
@@ -27,11 +30,12 @@ public class JeuPilotage extends AppCompatActivity implements View.OnClickListen
 
 
     private ArrayList<Button> all_buttons = new ArrayList<>();
+    int nombreAleatoire;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jeu_pilotage);
+    @SuppressLint("ResourceAsColor")
+    public JeuPilotage(Context context)
+    {
+        super(context);
 
         // Récuperation des boutons
 
@@ -61,12 +65,59 @@ public class JeuPilotage extends AppCompatActivity implements View.OnClickListen
 
         for (Button bt : all_buttons) {
             bt.setBackgroundDrawable(null);
-            bt.setOnClickListener(this);
+            bt.setOnClickListener((OnClickListener) this);
         }
+
+
 
     }
 
+    // On change aléatoirement la couleur des boutons
+
     @Override
+    protected void onDraw(Canvas canvas)
+    {
+        super.onDraw(canvas);
+        nombreAleatoire = 1 + (int)(Math.random() * ((9 - 1) + 1));
+        Change(nombreAleatoire);
+    }
+
+    public void Change(int nbAl){
+        switch (nbAl) {
+            case 1:
+                all_buttons.get(0).setBackgroundColor(0x2FAC49);
+                break;
+            case 2:
+                all_buttons.get(1).setBackgroundColor(0x2FAC49);
+                break;
+            case 3:
+                all_buttons.get(2).setBackgroundColor(0x2FAC49);
+                break;
+            case 4:
+                all_buttons.get(3).setBackgroundColor(0x2FAC49);
+                break;
+            case 5:
+                all_buttons.get(4).setBackgroundColor(0x2FAC49);
+                break;
+            case 6:
+                all_buttons.get(5).setBackgroundColor(0x2FAC49);
+                break;
+            case 7:
+                all_buttons.get(6).setBackgroundColor(0x2FAC49);
+                break;
+            case 8:
+                all_buttons.get(7).setBackgroundColor(0x2FAC49);
+                break;
+            case 9:
+                all_buttons.get(8).setBackgroundColor(0x2FAC49);
+                break;
+            default:
+        }
+
+
+    }
+
+
     public void onClick(View v) {
         //On ne fait rien si la case cliqué n'est pas vide
         if (v.getBackground() != null)

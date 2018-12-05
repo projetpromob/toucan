@@ -10,6 +10,8 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 
 import promob.gospace.Jeu_touch.PageDebSoucoupe;
+import promob.gospace.Pilotage.LancementJeuPilotage;
+import promob.gospace.Pilotage.PageDebPilotage;
 import promob.gospace.QCM.GameActivity;
 import promob.gospace.Accelerometer.PageDebAccelerometer;
 
@@ -21,6 +23,7 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
     private Button jeuAcce;
     private Button morpion;
     private Button quizz;
+    private Button test;
 
     private VideoView video;
     private VideoView video2;
@@ -35,6 +38,7 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
         jeuAcce = (Button) findViewById(R.id.jeuAccelerometre);
         morpion = (Button) findViewById(R.id.jeuMorpion);
         quizz = (Button) findViewById(R.id.jeuQuizz);
+        test = (Button) findViewById(R.id.button);
 
         video = (VideoView) findViewById(R.id.videoView);
         String videopath = "android.resource://" + getPackageName() + "/" + R.raw.videotouch;
@@ -86,6 +90,15 @@ import promob.gospace.Accelerometer.PageDebAccelerometer;
             @Override
             public void onClick(View v) {
                 Intent gameActivity = new Intent(ChoixJoueurSolo.this , GameActivity.class);
+                startActivity(gameActivity);
+            }
+        });
+
+        test.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent gameActivity = new Intent(ChoixJoueurSolo.this , PageDebPilotage.class);
                 startActivity(gameActivity);
             }
         });
