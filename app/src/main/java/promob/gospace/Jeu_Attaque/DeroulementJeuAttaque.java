@@ -36,6 +36,9 @@ public class DeroulementJeuAttaque extends View
     private float atbon2X;
     private float atbon2Y;
 
+    private float atbon3X;
+    private float atbon3Y;
+
     private Bitmap atmauvais;
 
     private float atmauvaisX;
@@ -55,10 +58,13 @@ public class DeroulementJeuAttaque extends View
     private float randomy2;
     private float randomx3;
     private float randomy3;
+    private float randomx4;
+    private float randomy4;
 
     private int i;
     private int choix;
     private int choix2;
+    private int choix3;
 
 
     @SuppressLint("ResourceAsColor")
@@ -101,21 +107,30 @@ public class DeroulementJeuAttaque extends View
 
 
        choix = 0 + (int)(Math.random() * ((3 - 0) + 1));
-       choix2 = 0 + (int)(Math.random() * ((4 - 0) + 1));
+       choix2 = 0 + (int)(Math.random() * ((3 - 0) + 1));
+       choix3 = 0 + (int)(Math.random() * ((3 - 0) + 1));
 
 
         randomx1 = (float) (Math.random()*(0.8f));
         atbon1X = randomx1*canvasWidth;
-        randomy1 = (float) (Math.random()*0.6f)+0.2f;
-        atbon1Y = randomy1*(canvasHeight/2);
+        randomy1 = 0 + (float)(Math.random() * ( ( (canvasHeight/3) - 0 ) + 1 ));
+        atbon1Y = randomy1;
+        //randomy1 = (float) (Math.random()*0.6f)+0.2f;
+        //atbon1Y = randomy1*(canvasHeight/3);
 
         randomx3 = (float) (Math.random()*(0.8f));
-
         atbon2X = randomx3*canvasWidth;
+        randomy3 = (canvasHeight/3) + (float)(Math.random() * ( ( ((canvasHeight/3)*2) - (canvasHeight/3) ) + 1 ));
+        atbon2Y = randomy3;
+        //randomy3 = (float) (Math.random()*0.6f)+0.2f;
+        //atbon2Y = randomy3*canvasHeight;
 
-        randomy3 = (float) (Math.random()*0.6f)+0.2f;
-
-        atbon2Y = randomy3*canvasHeight;
+        randomx4 = (float) (Math.random()*(0.8f));
+        atbon3X = randomx4*canvasWidth;
+        randomy4 = ((canvasHeight/3)*2) + (float)(Math.random() * ( ( ((canvasHeight/9)*8) - ((canvasHeight/3)*2) ) + 1 ));
+        atbon3Y = randomy4;
+        //randomy4 = (float) (Math.random()*0.6f)+0.2f;
+        //atbon3Y = randomy4*canvasHeight;
 
 
         switch (choix) {
@@ -134,7 +149,7 @@ public class DeroulementJeuAttaque extends View
                     break;
 
         }
-/*
+
         switch (choix2) {
             case 0:
                 canvas.drawBitmap(at1, atbon2X, atbon2Y, null);
@@ -147,13 +162,28 @@ public class DeroulementJeuAttaque extends View
                 break;
             case 3:
                 canvas.drawBitmap(at5, atbon2X, atbon2Y, null);
-            case 4:
-                canvas.drawBitmap(atmauvais, atbon2X, atbon2Y, null);
-                break;
             default:
                 break;
 
-        }*/
+        }
+
+        switch (choix2) {
+            case 0:
+                canvas.drawBitmap(at1, atbon3X, atbon3Y, null);
+                break;
+            case 1:
+                canvas.drawBitmap(at3, atbon3X, atbon3Y, null);
+                break;
+            case 2:
+                canvas.drawBitmap(at4, atbon3X, atbon3Y, null);
+                break;
+            case 3:
+                canvas.drawBitmap(at5, atbon3X, atbon3Y, null);
+            default:
+                break;
+
+        }
+
 
 
         // Objet mauvais :
@@ -217,6 +247,11 @@ public class DeroulementJeuAttaque extends View
         }
 
         if( ( ( x < ( atbon2X +at1.getWidth()) )  && (x > atbon2X) ) && ( (y>atbon2Y) && (y<(atbon2Y+at1.getHeight())) ) ){
+            score = score + 5;
+            Log.i("score", String.valueOf(score));
+        }
+
+        if( ( ( x < ( atbon3X +at1.getWidth()) )  && (x > atbon3X) ) && ( (y>atbon3Y) && (y<(atbon3Y+at1.getHeight())) ) ){
             score = score + 5;
             Log.i("score", String.valueOf(score));
         }
