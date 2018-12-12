@@ -16,7 +16,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="100dp"
-        android:text="Attrapes les étoiles mais attention aux météorites !!!"
+        android:text="Touche un maximum de planètes mais attention aux planètes rouges elles te font perdre une vie !!!"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
@@ -26,39 +26,41 @@
         android:id="@+id/starJaune"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/star"
+        app:srcCompat="@drawable/at3"
         android:layout_marginTop="300dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="20dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="20 points !"
+        android:text="Une planète = 5 points !"
         android:layout_toRightOf="@id/starJaune"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="320dp"
         android:layout_marginLeft="20dp"
         android:textColor="#FFDD00"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"/>
 
     <ImageView
         android:id="@+id/starRouge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/star2"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/starJaune"
+        app:srcCompat="@drawable/at2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10 points !"
+        android:text="Une vie en moins !"
         android:layout_toRightOf="@id/starRouge"
-        android:layout_marginTop="350dp"
+        android:layout_below="@+id/starJaune"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
         android:textColor="#FFDD00"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"/>
 
 

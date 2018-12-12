@@ -11,7 +11,7 @@ public class PageDebAttaque extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page_deb_soucoupe);
+        setContentView(R.layout.activity_page_deb_attaque);
 
         Thread thread = new Thread()
         {
@@ -21,7 +21,7 @@ public class PageDebAttaque extends AppCompatActivity {
                 try
                 {
                     // Affichage de l'introduction du jeu pendant un temps donné :
-                    sleep(2500);
+                    sleep(3500);
                 }
                 catch (Exception e)
                 {

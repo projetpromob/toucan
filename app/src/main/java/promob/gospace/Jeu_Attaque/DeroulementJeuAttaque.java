@@ -89,7 +89,8 @@ public class DeroulementJeuAttaque extends View
         life[0] = BitmapFactory.decodeResource(getResources() , R.drawable.coeur);
 
         score = 0;
-        lifeAttaque = 6;
+        lifeAttaque = 3;
+
 
     }
 
@@ -97,6 +98,7 @@ public class DeroulementJeuAttaque extends View
     protected void onDraw(Canvas canvas)
     {
         super.onDraw(canvas);
+
 
         canvasWidth = canvas.getWidth();
         canvasHeight = canvas.getHeight();
@@ -120,14 +122,14 @@ public class DeroulementJeuAttaque extends View
 
         randomx3 = (float) (Math.random()*(0.8f));
         atbon2X = randomx3*canvasWidth;
-        randomy3 = (canvasHeight/3) + (float)(Math.random() * ( ( ((canvasHeight/3)*2) - (canvasHeight/3) ) + 1 ));
+        randomy3 = ((canvasHeight/3)+(float)0.2) + (float)(Math.random() * ( ( ((canvasHeight/3)*2) - (canvasHeight/3) ) + 1 ));
         atbon2Y = randomy3;
         //randomy3 = (float) (Math.random()*0.6f)+0.2f;
         //atbon2Y = randomy3*canvasHeight;
 
         randomx4 = (float) (Math.random()*(0.8f));
         atbon3X = randomx4*canvasWidth;
-        randomy4 = ((canvasHeight/3)*2) + (float)(Math.random() * ( ( ((canvasHeight/9)*8) - ((canvasHeight/3)*2) ) + 1 ));
+        randomy4 = (((canvasHeight/3)*2)+(float)0.2) + (float)(Math.random() * ( ( ((canvasHeight/9)*8) - ((canvasHeight/3)*2) ) + 1 ));
         atbon3Y = randomy4;
         //randomy4 = (float) (Math.random()*0.6f)+0.2f;
         //atbon3Y = randomy4*canvasHeight;
@@ -204,28 +206,18 @@ public class DeroulementJeuAttaque extends View
 
         canvas.drawText("Score : " + score, 25, 80, scorePaint );
 
-        if(lifeAttaque == 6){
-            for(int i=0; i<3; i++)
+        for(int i=0; i<3; i++)
+        {
+            // gérer la position des coeurs de vies :
+            int x = (int) (650 + life[0].getWidth() * 1.5 * i);
+            int y = 30;
+
+            if(i < lifeAttaque)
             {
-                int x = (int) (650 + life[0].getWidth() * 1.5 * i);
-                int y = 30;
-                canvas.drawBitmap(life[0],x,y,null);
+                canvas.drawBitmap(life[0], x, y, null);
             }
-        }
-        else if(lifeAttaque == 4){
-            for(int i=0; i<2; i++)
+            else
             {
-                int x = (int) (650 + life[0].getWidth() * 1.5 * i);
-                int y = 30;
-                canvas.drawBitmap(life[0],x,y,null);
-            }
-        }
-        else if(lifeAttaque == 2){
-            for(int i=0; i<1; i++)
-            {
-                int x = (int) (650 + life[0].getWidth() * 1.5 * i);
-                int y = 30;
-                canvas.drawBitmap(life[0],x,y,null);
             }
         }
 
@@ -237,41 +229,49 @@ public class DeroulementJeuAttaque extends View
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        float x = event.getX();
-        float y = event.getY();
+        if(event.getAction() == MotionEvent.ACTION_DOWN){
+
+            float x = event.getX();
+            float y = event.getY();
 
 
-        if( ( ( x < ( atbon1X +at1.getWidth()) )  && (x > atbon1X) ) && ( (y>atbon1Y) && (y<(atbon1Y+at1.getHeight())) ) ){
-            score = score + 5;
-            Log.i("score", String.valueOf(score));
-        }
-
-        if( ( ( x < ( atbon2X +at1.getWidth()) )  && (x > atbon2X) ) && ( (y>atbon2Y) && (y<(atbon2Y+at1.getHeight())) ) ){
-            score = score + 5;
-            Log.i("score", String.valueOf(score));
-        }
-
-        if( ( ( x < ( atbon3X +at1.getWidth()) )  && (x > atbon3X) ) && ( (y>atbon3Y) && (y<(atbon3Y+at1.getHeight())) ) ){
-            score = score + 5;
-            Log.i("score", String.valueOf(score));
-        }
-
-        if(x< (atmauvaisX+atmauvais.getWidth())  && x > atmauvaisX  && y>atmauvaisY  && y<(atmauvaisY+atmauvais.getHeight()) ){
-
-            lifeAttaque--;
-
-            if(lifeAttaque == 0)
-            {
-                Intent gameOverIntent = new Intent(getContext() , GameOverAttaque.class);
-                gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
-                //Récuperation du score :
-                gameOverIntent.putExtra("scoreRecup", score);
-
-                getContext().startActivity(gameOverIntent);
+            if( ( ( x < ( atbon1X +at1.getWidth()) )  && (x > atbon1X) ) && ( (y>atbon1Y) && (y<(atbon1Y+at1.getHeight())) ) ){
+                score = score + 5;
+                Log.i("score", String.valueOf(score));
 
             }
+
+            if( ( ( x < ( atbon2X +at1.getWidth()) )  && (x > atbon2X) ) && ( (y>atbon2Y) && (y<(atbon2Y+at1.getHeight())) ) ){
+                score = score + 5;
+                Log.i("score", String.valueOf(score));
+            }
+
+            if( ( ( x < ( atbon3X +at1.getWidth()) )  && (x > atbon3X) ) && ( (y>atbon3Y) && (y<(atbon3Y+at1.getHeight())) ) ){
+                score = score + 5;
+                Log.i("score", String.valueOf(score));
+            }
+
+            if(x< (atmauvaisX+atmauvais.getWidth())  && x > atmauvaisX  && y>atmauvaisY  && y<(atmauvaisY+atmauvais.getHeight()) ){
+
+                lifeAttaque--;
+                
+
+                if(lifeAttaque == 0)
+                {
+                    Intent gameOverIntent = new Intent(getContext() , GameOverAttaque.class);
+                    gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                    //Récuperation du score :
+                    gameOverIntent.putExtra("scoreRecup", score);
+
+                    getContext().startActivity(gameOverIntent);
+
+                }
+            }
+
         }
+
+
 
         return true;
     }

@@ -15,7 +15,7 @@ public class LancementJeuAttaque extends AppCompatActivity
 
     private DeroulementJeuAttaque gameView;
     private Handler handler = new Handler();
-    private final static long Interval = 1000;
+    private final static long Interval = 1500;
 
     MediaPlayer mediaPlayer;
 
