@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import promob.gospace.Jeu_Attaque.PageDebAttaque;
 import promob.gospace.Jeu_touch.PageDebSoucoupe;
 import promob.gospace.QCM.GameActivity;
 import promob.gospace.Accelerometer.PageDebAccelerometer;
@@ -97,7 +98,7 @@ public class ChoixJoueurSolo extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent gameActivity = new Intent(ChoixJoueurSolo.this , JeuTape.class);
+                Intent gameActivity = new Intent(ChoixJoueurSolo.this , PageDebAttaque.class);
                 startActivity(gameActivity);
             }
         });

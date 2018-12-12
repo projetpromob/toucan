@@ -31,7 +31,12 @@
         <activity android:name=".Pilotage.JeuPilotage" />
         <activity android:name=".Pilotage.LancementJeuPilotage" />
         <activity android:name=".Pilotage.PageDebPilotage" />
-        <activity android:name=".Tape.JeuTape"></activity>
+        <activity android:name=".Tape.JeuTape" />
+        <activity android:name=".Tape.DeroulementTape" />
+        <activity android:name=".Jeu_Attaque.DeroulementJeuAttaque" />
+        <activity android:name=".Jeu_Attaque.LancementJeuAttaque" />
+        <activity android:name=".Jeu_Attaque.GameOverAttaque" />
+        <activity android:name=".Jeu_Attaque.PageDebAttaque"></activity>
     </application>
 
 </manifest>

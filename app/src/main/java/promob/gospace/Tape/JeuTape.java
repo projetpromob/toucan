@@ -3,6 +3,7 @@ package promob.gospace.Tape;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import promob.gospace.Jeu_touch.GameOverActivity;
 import promob.gospace.R;
@@ -60,6 +62,18 @@ public class JeuTape extends AppCompatActivity implements View.OnClickListener {
         Button bt8 = (Button) findViewById(id.bt8);
         Button bt9 = (Button) findViewById(id.bt9);
 
+        View l1 = (View) findViewById(id.line1);
+        View l2 = (View) findViewById(id.line2);
+        View l3 = (View) findViewById(id.line3);
+        View l4 = (View) findViewById(id.line4);
+
+
+        //Suppression des lignes :
+        l1.setBackgroundDrawable(null);
+        l2.setBackgroundDrawable(null);
+        l3.setBackgroundDrawable(null);
+        l4.setBackgroundDrawable(null);
+
         // Ajout des boutons dans l'ArrayList :
 
         all_buttons.add(bt1);
@@ -79,14 +93,25 @@ public class JeuTape extends AppCompatActivity implements View.OnClickListener {
             bt.setOnClickListener(this);
         }*/
 
-        //while(gameover==false){
+
         nombreAleatoire = 1 + (int)(Math.random() * ((9 - 1) + 1));
         Change(nombreAleatoire);
-        //}
 
         //Change(1);
 
 
+    }
+
+
+    private void attente(int nbSecondes){
+        int attente = nbSecondes*1000;
+        Date date = new Date();
+        long debut = date.getTime();
+        long somme = debut + attente;
+        while(debut<somme){
+            date = new Date();
+            debut = date.getTime();
+        }
     }
 
 
