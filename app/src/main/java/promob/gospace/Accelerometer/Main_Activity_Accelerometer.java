@@ -101,6 +101,8 @@ public class Main_Activity_Accelerometer extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // L'utilisateur peut recommencer s'il le veut
+                                mEngine.stop();
+
                                 Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, GameOverActivity_Acce.class);
                                 gameActivity.putExtra("scoreRecupA",final_time);
                                 startActivity(gameActivity);
@@ -137,6 +139,7 @@ public class Main_Activity_Accelerometer extends Activity {
 
         Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
         startActivity(gameActivity);
+        mEngine.stop();
         this.onStop();
     }
 }
