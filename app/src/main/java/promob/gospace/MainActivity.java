@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMulti(View view){
-        Intent startNewActivity = new Intent(this, ChoixJoueurSolo.class );
+        Intent startNewActivity = new Intent(this, promob.gospace.Multi.multi_activity.class );
         startActivity(startNewActivity);
     }
 }
