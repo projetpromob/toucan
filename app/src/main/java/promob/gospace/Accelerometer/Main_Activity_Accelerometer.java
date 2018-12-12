@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import promob.gospace.MainActivity;
+import promob.gospace.QCM.GameActivity2;
 
 import java.util.List;
 
@@ -129,5 +130,13 @@ public class Main_Activity_Accelerometer extends Activity {
         // A chaque fois qu'une boîte de dialogue est lancée, on arrête le moteur physique
 
         mEngine.stop();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
+        startActivity(gameActivity);
+        this.onStop();
     }
 }
