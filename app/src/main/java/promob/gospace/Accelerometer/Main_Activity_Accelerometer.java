@@ -104,7 +104,7 @@ public class Main_Activity_Accelerometer extends Activity {
                                 mEngine.stop();
 
                                 Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, GameOverActivity_Acce.class);
-                                
+
                                 gameActivity.putExtra("scoreRecupA",final_time);
 
                                 startActivity(gameActivity);
