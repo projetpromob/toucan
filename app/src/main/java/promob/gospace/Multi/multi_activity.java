@@ -101,6 +101,15 @@ public class multi_activity extends AppCompatActivity {
                     if(tempMsg.substring(0,3).equals("###")){
 
                         Intent score = new Intent(multi_activity.this, ScoreActivity.class);
+                        if( Integer.valueOf(tempMsg.substring(3,tempMsg.length()))  < res){
+
+                            score.putExtra("res", "gagnant");
+
+                        }else {
+
+                            score.putExtra("res","perdant");
+
+                        }
                         startActivity(score);
 
                     } else {
@@ -234,7 +243,7 @@ public class multi_activity extends AppCompatActivity {
             editor.commit();
 
 
-            Log.i("deug", String.valueOf(res));
+            //Log.i("deug", String.valueOf(res));
 
             if(res<=0){
                 scoreText.setText("Commencer");
