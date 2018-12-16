@@ -27,6 +27,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -34,6 +36,7 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,6 +66,8 @@ public class multi_activity extends AppCompatActivity {
     ServerClass serverClass;
     ClientClass clientClass;
     SendReceive sendReceive;
+
+    SharedPreferences  mPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -242,11 +247,12 @@ public class multi_activity extends AppCompatActivity {
             if(info.groupFormed && info.isGroupOwner){
                 connectionStatus.setText("Host");
 
-
                 serverClass=new ServerClass();
+
                 serverClass.start();
             }else if (info.groupFormed){
                 connectionStatus.setText("Client");
+
                 clientClass = new ClientClass(groupOwnerAddress);
                 clientClass.start();
 
@@ -273,8 +279,10 @@ public class multi_activity extends AppCompatActivity {
         @Override
         public void run() {
             try {
+
                 serverSocket = new ServerSocket(8888);
                 socket = serverSocket.accept();
+
                 sendReceive = new SendReceive(socket);
                 sendReceive.start();
 
@@ -340,6 +348,7 @@ public class multi_activity extends AppCompatActivity {
         public void run() {
             try {
                 socket.connect(new InetSocketAddress(hostAdd, 8888), 500);
+
                 sendReceive = new SendReceive(socket);
                 sendReceive.start();
             } catch (IOException e) {

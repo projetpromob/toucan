@@ -29,7 +29,7 @@
         android:layout_height="200dp"
         android:layout_below="@+id/onOff"
         android:layout_marginTop="25dp"
-        android:background="@android:color/holo_orange_light" />
+        android:background="#00374F" />
 
     <TextView
         android:id="@+id/readMsg"
@@ -47,10 +47,18 @@
         android:id="@+id/writeMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/sendButton"
+        android:layout_toRightOf="@+id/sendButton"
         android:ems="10"
-        android:inputType="textPersonName"
-        />
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/sendButton"
@@ -73,15 +81,17 @@
 
     <TextView
         android:id="@+id/score"
-        android:layout_width="match_parent"
+        android:layout_width="292dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="454dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
+        android:background="@drawable/buttonshape"
         android:text="Score"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
 
 
 </RelativeLayout>
