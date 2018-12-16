@@ -100,7 +100,7 @@ public class multi_activity extends AppCompatActivity {
 
                     if(tempMsg.substring(0,3).equals("###")){
 
-                        Intent score = new Intent(multi_activity.this, ScoreActivity.class);
+                        Intent score = new Intent(multi_activity.this, PageFin.class);
                         if( Integer.valueOf(tempMsg.substring(3,tempMsg.length()))  < res){
 
                             score.putExtra("res", "gagnant");

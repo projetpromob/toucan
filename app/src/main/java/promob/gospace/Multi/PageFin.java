@@ -21,7 +21,7 @@ public class PageFin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score);
+        setContentView(R.layout.activity_vainqueur);
 
         Acceuil = (Button) findViewById(R.id.acceuil_btn);
         DisplayScore = (TextView) findViewById(R.id.displayScore);
