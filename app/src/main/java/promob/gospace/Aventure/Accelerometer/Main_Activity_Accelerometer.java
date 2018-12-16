@@ -3,8 +3,10 @@ package promob.gospace.Aventure.Accelerometer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -100,6 +102,15 @@ public class Main_Activity_Accelerometer extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // L'utilisateur peut recommencer s'il le veut
+
+                                SharedPreferences prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+                                int scores = prefs.getInt("key", 0); //0 is the default value
+
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putInt("key", scores + final_time);
+                                editor.commit();
+                                Log.i("DEBUG",String.valueOf(scores+ final_time));
+
 
                                 //Lancer le jeu suivant :
                                 Intent jeusuivant2 = new Intent(Main_Activity_Accelerometer.this, promob.gospace.Aventure.Jeu_touch.PageDebSoucoupe.class);

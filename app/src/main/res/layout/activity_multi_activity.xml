@@ -79,7 +79,7 @@
         android:textSize="18sp"
         android:textStyle="italic" />
 
-    <TextView
+    <Button
         android:id="@+id/score"
         android:layout_width="292dp"
         android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="430dp"
         android:background="@drawable/buttonshape"
-        android:text="Score"
+        android:text="Commencer"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"

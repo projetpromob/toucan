@@ -1,8 +1,11 @@
 package promob.gospace.Aventure;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,7 +32,7 @@ public class Quizz2 extends AppCompatActivity {
 
         if(reponse.equals("Bonne réponse")){
 
-            score = score + 1;
+            score = score + 30;
 
         }
 
@@ -50,6 +53,15 @@ public class Quizz2 extends AppCompatActivity {
 
                     Intent jeusuivant = new Intent( Quizz2.this, promob.gospace.Aventure.Accelerometer.PageDebAccelerometer.class);
                     startActivity(jeusuivant);
+
+                    SharedPreferences prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+                    int scores = prefs.getInt("key", 0); //0 is the default value
+
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("key", scores + score);
+                    editor.commit();
+
+                    Log.i("DEBUG",String.valueOf(scores+ score));
 
                     /*
                     Intent scoreActivity = new Intent(Quizz2.this, ScoreActivity.class);

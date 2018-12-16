@@ -231,18 +231,18 @@ public class DeroulementJeuAttaque extends View
 
             if( ( ( x < ( atbon1X +at1.getWidth()) )  && (x > atbon1X) ) && ( (y>atbon1Y) && (y<(atbon1Y+at1.getHeight())) ) ){
                 score = score + 5;
-                Log.i("score", String.valueOf(score));
+                //Log.i("score", String.valueOf(score));
 
             }
 
             if( ( ( x < ( atbon2X +at1.getWidth()) )  && (x > atbon2X) ) && ( (y>atbon2Y) && (y<(atbon2Y+at1.getHeight())) ) ){
                 score = score + 5;
-                Log.i("score", String.valueOf(score));
+                //Log.i("score", String.valueOf(score));
             }
 
             if( ( ( x < ( atbon3X +at1.getWidth()) )  && (x > atbon3X) ) && ( (y>atbon3Y) && (y<(atbon3Y+at1.getHeight())) ) ){
                 score = score + 5;
-                Log.i("score", String.valueOf(score));
+                //Log.i("score", String.valueOf(score));
             }
 
             if(x< (atmauvaisX+atmauvais.getWidth())  && x > atmauvaisX  && y>atmauvaisY  && y<(atmauvaisY+atmauvais.getHeight()) ){
@@ -252,12 +252,11 @@ public class DeroulementJeuAttaque extends View
 
                 if(lifeAttaque == 0)
                 {
-                    Intent gameOverIntent = new Intent(getContext() , GameOverAttaque.class);
+                    Intent gameOverIntent = new Intent(getContext() , promob.gospace.Multi.multi_activity.class);
                     gameOverIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
                     //Récuperation du score :
-                    gameOverIntent.putExtra("scoreRecup", score);
-
+                    gameOverIntent.putExtra("scoreAttaque", score);
                     getContext().startActivity(gameOverIntent);
 
                 }

@@ -39,14 +39,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import promob.gospace.R;
+import promob.gospace.ScoreActivity;
 
 public class multi_activity extends AppCompatActivity {
+
+    int res = 0;
 
     Button btnOnOff, btnDiscover, btnSend;
     ListView listView;
     TextView read_msg_box, connectionStatus;
     EditText writeMsg;
-    TextView scoreText;
+    Button scoreText;
 
     WifiManager wifiManager;
     WifiP2pManager mManager;
@@ -83,7 +86,6 @@ public class multi_activity extends AppCompatActivity {
         initialWork();
         exqListener();
 
-
     }
 
     Handler handler = new Handler(new Handler.Callback() {
@@ -93,7 +95,18 @@ public class multi_activity extends AppCompatActivity {
                 case MESSAGE_READ:
                     byte[] readBuff = (byte[]) msg.obj;
                     String tempMsg = new String(readBuff,0,msg.arg1);
-                    read_msg_box.setText(tempMsg);
+
+                    if(tempMsg.substring(0,3).equals("###")){
+
+                        Intent score = new Intent(multi_activity.this, ScoreActivity.class);
+                        startActivity(score);
+
+                    } else {
+
+                        read_msg_box.setText(tempMsg);
+
+                    }
+
                     break;
             }
             return true;
@@ -103,6 +116,31 @@ public class multi_activity extends AppCompatActivity {
 
 
     private void exqListener() {
+
+        scoreText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(scoreText.getText() == "Commencer"){
+
+                    Intent i = new Intent(multi_activity.this, promob.gospace.Aventure.PageDeb.class);
+                    scoreText.setText("0");
+                    startActivity(i);
+
+                } else {
+
+                    Log.i("debug",scoreText.getText().toString());
+
+                    String msg = ("###" + String.valueOf(res) );
+
+                    sendReceive.write( msg.getBytes() );
+
+                }
+
+
+
+            }
+        });
 
         btnOnOff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,19 +216,31 @@ public class multi_activity extends AppCompatActivity {
         read_msg_box = (TextView) findViewById(R.id.readMsg);
         connectionStatus = (TextView) findViewById(R.id.connectionStatus);
         writeMsg = (EditText) findViewById(R.id.writeMsg);
-        scoreText = (TextView) findViewById(R.id.score);
+        scoreText = (Button) findViewById(R.id.score);
 
-        try {
+
             Intent callingIntent = getIntent();
-            int i = callingIntent.getIntExtra("scorefinal",0);
-            Log.i("deug", String.valueOf(i));
-            scoreText.setText(String.valueOf(i));
-            sendReceive.write(String.valueOf(i).getBytes());
+            int scoreprec = callingIntent.getIntExtra("scoreAttaque",0);
+
+            SharedPreferences prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+            int scores = prefs.getInt("key", 0); //0 is the default value
+
+            SharedPreferences.Editor editor = prefs.edit();
+            res = scores+scoreprec;
+
+            editor.putInt("key", res);
+            editor.commit();
 
 
-        } catch(Exception e){
-            //This catch block catches all the exceptions
-        }
+            Log.i("deug", String.valueOf(res));
+
+            if(res<=0){
+                scoreText.setText("Commencer");
+            }else {
+                scoreText.setText(String.valueOf(res));
+
+            }
+
 
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
