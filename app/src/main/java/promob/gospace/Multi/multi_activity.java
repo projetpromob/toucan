@@ -2,8 +2,11 @@ package promob.gospace.Multi;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.wifi.WifiManager;
+import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pDeviceList;
@@ -11,8 +14,10 @@ import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Handler;
 import android.os.Message;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,6 +45,7 @@ public class multi_activity extends AppCompatActivity {
     ListView listView;
     TextView read_msg_box, connectionStatus;
     EditText writeMsg;
+    TextView scoreText;
 
     WifiManager wifiManager;
     WifiP2pManager mManager;
@@ -62,6 +68,14 @@ public class multi_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_activity);
+
+
+
+        if (android.os.Build.VERSION.SDK_INT > 9)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         initialWork();
         exqListener();
@@ -124,6 +138,7 @@ public class multi_activity extends AppCompatActivity {
                 final WifiP2pDevice device = deviceArray[i];
                 WifiP2pConfig config = new WifiP2pConfig();
                 config.deviceAddress = device.deviceAddress;
+                config.wps.setup = WpsInfo.PBC;
 
                 mManager.connect(mChannel, config, new WifiP2pManager.ActionListener() {
                     @Override
@@ -160,6 +175,19 @@ public class multi_activity extends AppCompatActivity {
         read_msg_box = (TextView) findViewById(R.id.readMsg);
         connectionStatus = (TextView) findViewById(R.id.connectionStatus);
         writeMsg = (EditText) findViewById(R.id.writeMsg);
+        scoreText = (TextView) findViewById(R.id.score);
+
+        try {
+            Intent callingIntent = getIntent();
+            int i = callingIntent.getIntExtra("scorefinal",0);
+            Log.i("deug", String.valueOf(i));
+            scoreText.setText(String.valueOf(i));
+            sendReceive.write(String.valueOf(i).getBytes());
+
+
+        } catch(Exception e){
+            //This catch block catches all the exceptions
+        }
 
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
@@ -213,6 +241,8 @@ public class multi_activity extends AppCompatActivity {
 
             if(info.groupFormed && info.isGroupOwner){
                 connectionStatus.setText("Host");
+
+
                 serverClass=new ServerClass();
                 serverClass.start();
             }else if (info.groupFormed){

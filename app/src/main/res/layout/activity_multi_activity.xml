@@ -71,6 +71,18 @@
         android:textSize="18sp"
         android:textStyle="italic" />
 
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="454dp"
+        android:text="Score"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
 
 </RelativeLayout>
 

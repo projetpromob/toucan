@@ -76,7 +76,7 @@ public class Main_Activity_Accelerometer extends Activity {
 
         float result_time = time/1000;
 
-        Integer score_time = (int) (long) ((1/result_time)*100);
+        final Integer score_time = (int) (long) ((1/result_time)*100);
 
         final Integer final_time = (score_time * score_time)*2 ;
 
@@ -104,8 +104,13 @@ public class Main_Activity_Accelerometer extends Activity {
                                 mEngine.stop();
 
                                 Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, GameOverActivity_Acce.class);
+                                Intent scorefinal = new Intent(Main_Activity_Accelerometer.this, promob.gospace.Multi.multi_activity.class);
+                                scorefinal.putExtra("scorefinal",final_time);
+                                startActivity(scorefinal);
+
                                 gameActivity.putExtra("scoreRecupA",final_time);
-                                startActivity(gameActivity);
+
+                                //startActivity(gameActivity);
 
 
                             }

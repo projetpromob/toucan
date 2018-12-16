@@ -63,7 +63,7 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
                         b.setTailleX(lune.getWidth());
                         b.setTailleY(lune.getHeight());
 
-                        
+
                         break;
                     case METEORITE:
                         Bitmap meteorite = BitmapFactory.decodeResource( getResources(), R.drawable.meteor);
