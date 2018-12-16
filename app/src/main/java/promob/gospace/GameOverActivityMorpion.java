@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import promob.gospace.ChoixJoueurSolo;
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
 import promob.gospace.Morpion;
 import promob.gospace.R;
 
@@ -56,5 +57,12 @@ public class GameOverActivityMorpion extends AppCompatActivity {
         //Affichage du gagant
         DisplayScore.setText(gagnant);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(GameOverActivityMorpion.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }

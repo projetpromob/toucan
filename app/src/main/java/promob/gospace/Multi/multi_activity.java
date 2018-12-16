@@ -38,6 +38,8 @@ import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 import promob.gospace.ScoreActivity;
 
@@ -403,6 +405,13 @@ public class multi_activity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(multi_activity.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 
 }

@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
 import promob.gospace.Jeu_touch.GameOverActivity;
 
 public class Morpion extends AppCompatActivity implements View.OnClickListener {
@@ -214,6 +215,13 @@ public class Morpion extends AppCompatActivity implements View.OnClickListener {
         alertDialog.show();*/
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(Morpion.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 
     /*private void resetGame(){

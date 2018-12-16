@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 public class PageDebSoucoupe extends AppCompatActivity {
@@ -43,5 +45,12 @@ public class PageDebSoucoupe extends AppCompatActivity {
     {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(PageDebSoucoupe.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }

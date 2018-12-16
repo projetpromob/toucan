@@ -19,6 +19,8 @@ import java.util.logging.Handler;
 
 import javax.security.auth.login.LoginException;
 
+import promob.gospace.Accelerometer.Main_Activity_Accelerometer;
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 
@@ -279,4 +281,5 @@ public class DeroulementJeuAttaque extends View
 
         return true;
     }
+
 }

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
 import promob.gospace.Jeu_Attaque.PageDebAttaque;
 import promob.gospace.Jeu_touch.PageDebSoucoupe;
 import promob.gospace.QCM.GameActivity;
@@ -92,5 +93,13 @@ public class ChoixJoueurSolo extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(ChoixJoueurSolo.this, MainActivity.class);
+        startActivity(gameActivity);
+    }
+
     }
 

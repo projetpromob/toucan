@@ -1,10 +1,13 @@
 package promob.gospace.Jeu_touch;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 import java.util.Timer;
@@ -51,5 +54,12 @@ public class LancementJeuSoucoupe extends AppCompatActivity
             }
         }, 0, Interval);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(LancementJeuSoucoupe.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }

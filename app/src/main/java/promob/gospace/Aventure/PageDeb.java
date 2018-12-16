@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 public class PageDeb extends AppCompatActivity {
@@ -50,5 +52,12 @@ public class PageDeb extends AppCompatActivity {
     {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(PageDeb.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }

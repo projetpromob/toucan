@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 public class PageDebAttaque extends AppCompatActivity {
@@ -60,5 +62,12 @@ public class PageDebAttaque extends AppCompatActivity {
     {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(PageDebAttaque.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }

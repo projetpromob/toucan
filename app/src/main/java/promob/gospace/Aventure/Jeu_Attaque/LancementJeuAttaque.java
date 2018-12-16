@@ -1,5 +1,6 @@
 package promob.gospace.Aventure.Jeu_Attaque;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import promob.gospace.MainActivity;
 import promob.gospace.R;
 
 public class LancementJeuAttaque extends AppCompatActivity
@@ -51,5 +53,12 @@ public class LancementJeuAttaque extends AppCompatActivity
             }
         }, 0, Interval);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(LancementJeuAttaque.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }
