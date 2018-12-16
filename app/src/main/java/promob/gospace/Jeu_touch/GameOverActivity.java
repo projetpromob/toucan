@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import promob.gospace.ChoixJoueurSolo;
+import promob.gospace.MainActivity;
+import promob.gospace.QCM.GameActivity;
+import promob.gospace.QCM.GameActivity2;
 import promob.gospace.R;
 
 public class GameOverActivity extends AppCompatActivity {
@@ -57,5 +60,13 @@ public class GameOverActivity extends AppCompatActivity {
         //Affichage du score :
         DisplayScore.setText("Score : " + score);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(GameOverActivity.this, MainActivity.class);
+        startActivity(gameActivity);
+        this.onStop();
     }
 }

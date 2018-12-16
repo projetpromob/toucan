@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import promob.gospace.MainActivity;
+import promob.gospace.QCM.GameActivity2;
 
 import java.util.List;
 
@@ -75,7 +76,7 @@ public class Main_Activity_Accelerometer extends Activity {
 
         float result_time = time/1000;
 
-        Integer score_time = (int) (long) ((1/result_time)*100);
+        final Integer score_time = (int) (long) ((1/result_time)*100);
 
         final Integer final_time = (score_time * score_time)*2 ;
 
@@ -100,9 +101,16 @@ public class Main_Activity_Accelerometer extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // L'utilisateur peut recommencer s'il le veut
+                                mEngine.stop();
+
                                 Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, GameOverActivity_Acce.class);
+                                Intent scorefinal = new Intent(Main_Activity_Accelerometer.this, promob.gospace.Multi.multi_activity.class);
+                                scorefinal.putExtra("scorefinal",final_time);
+                                startActivity(scorefinal);
+
                                 gameActivity.putExtra("scoreRecupA",final_time);
-                                startActivity(gameActivity);
+
+                                //startActivity(gameActivity);
 
 
                             }
@@ -129,5 +137,14 @@ public class Main_Activity_Accelerometer extends Activity {
         // A chaque fois qu'une boîte de dialogue est lancée, on arrête le moteur physique
 
         mEngine.stop();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
+        startActivity(gameActivity);
+        mEngine.stop();
+        this.onStop();
     }
 }
