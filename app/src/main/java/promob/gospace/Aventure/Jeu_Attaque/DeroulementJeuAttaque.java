@@ -1,4 +1,4 @@
-package promob.gospace.Jeu_Attaque;
+package promob.gospace.Aventure.Jeu_Attaque;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,15 +9,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
-import java.util.Date;
-import java.util.logging.Handler;
-
-import javax.security.auth.login.LoginException;
 
 import promob.gospace.R;
 
@@ -67,7 +61,6 @@ public class DeroulementJeuAttaque extends View
     private int choix3;
 
 
-
     @SuppressLint("ResourceAsColor")
     public DeroulementJeuAttaque(Context context)
     {
@@ -91,7 +84,6 @@ public class DeroulementJeuAttaque extends View
 
         score = 0;
         lifeAttaque = 3;
-
 
 
     }
@@ -246,18 +238,17 @@ public class DeroulementJeuAttaque extends View
             if( ( ( x < ( atbon2X +at1.getWidth()) )  && (x > atbon2X) ) && ( (y>atbon2Y) && (y<(atbon2Y+at1.getHeight())) ) ){
                 score = score + 5;
                 Log.i("score", String.valueOf(score));
-
             }
 
             if( ( ( x < ( atbon3X +at1.getWidth()) )  && (x > atbon3X) ) && ( (y>atbon3Y) && (y<(atbon3Y+at1.getHeight())) ) ){
                 score = score + 5;
                 Log.i("score", String.valueOf(score));
-
             }
 
             if(x< (atmauvaisX+atmauvais.getWidth())  && x > atmauvaisX  && y>atmauvaisY  && y<(atmauvaisY+atmauvais.getHeight()) ){
 
                 lifeAttaque--;
+
 
                 if(lifeAttaque == 0)
                 {
@@ -270,7 +261,6 @@ public class DeroulementJeuAttaque extends View
                     getContext().startActivity(gameOverIntent);
 
                 }
-
             }
 
         }

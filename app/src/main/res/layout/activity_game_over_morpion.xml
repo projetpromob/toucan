@@ -45,7 +45,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_style"
         android:padding="10dp"
-        android:text="Changer de jeu"
+        android:text="Retour acceuil"
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"

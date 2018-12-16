@@ -36,7 +36,18 @@
         <activity android:name=".Jeu_Attaque.DeroulementJeuAttaque" />
         <activity android:name=".Jeu_Attaque.LancementJeuAttaque" />
         <activity android:name=".Jeu_Attaque.GameOverAttaque" />
-        <activity android:name=".Jeu_Attaque.PageDebAttaque"></activity>
+        <activity android:name=".Jeu_Attaque.PageDebAttaque" />
+        <activity android:name=".Aventure.Quizz1" />
+        <activity android:name=".Aventure.Quizz2" />
+        <activity android:name=".Aventure.Accelerometer.PageDebAccelerometer" />
+        <activity android:name=".Aventure.Accelerometer.Main_Activity_Accelerometer" />
+        <activity android:name=".Aventure.Accelerometer.GameOverActivity_Acce" />
+        <activity android:name=".Aventure.Jeu_touch.PageDebSoucoupe" />
+        <activity android:name=".Aventure.Jeu_touch.LancementJeuSoucoupe" />
+        <activity android:name=".Aventure.Jeu_Attaque.PageDebAttaque" />
+        <activity android:name=".Aventure.Jeu_Attaque.LancementJeuAttaque" />
+        <activity android:name=".Aventure.Jeu_Attaque.GameOverAttaque" />
+        <activity android:name=".Aventure.PageDeb"></activity>
     </application>
 
 </manifest>

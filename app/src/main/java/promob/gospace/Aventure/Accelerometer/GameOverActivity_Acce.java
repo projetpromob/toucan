@@ -1,31 +1,32 @@
-package promob.gospace;
+package promob.gospace.Aventure.Accelerometer;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import promob.gospace.ChoixJoueurSolo;
-import promob.gospace.Morpion;
 import promob.gospace.R;
 
-public class GameOverActivityMorpion extends AppCompatActivity {
+public class GameOverActivity_Acce extends AppCompatActivity {
 
 
     private Button Rejouer;
     private TextView DisplayScore;
-    private String gagnant;
+    private String score;
     private Button Change;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_over_morpion);
+        setContentView(R.layout.activity_game_over);
 
-        gagnant = getIntent().getExtras().get("gagnant").toString();
+
+        // Recuperation du score :
+        score = getIntent().getExtras().get("scoreRecupA").toString();
 
         Rejouer = (Button) findViewById(R.id.rejouer_btn);
         Change = (Button) findViewById(R.id.changer_btn);
@@ -35,7 +36,7 @@ public class GameOverActivityMorpion extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent mainIntent = new Intent(GameOverActivityMorpion.this , Morpion.class);
+                Intent mainIntent = new Intent(GameOverActivity_Acce.this , Main_Activity_Accelerometer.class);
                 startActivity(mainIntent);
 
             }
@@ -45,7 +46,7 @@ public class GameOverActivityMorpion extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent mainIntent = new Intent(GameOverActivityMorpion.this , MainActivity.class);
+                Intent mainIntent = new Intent(GameOverActivity_Acce.this , ChoixJoueurSolo.class);
                 startActivity(mainIntent);
 
             }
@@ -53,8 +54,8 @@ public class GameOverActivityMorpion extends AppCompatActivity {
 
 
 
-        //Affichage du gagant
-        DisplayScore.setText(gagnant);
+        //Affichage du score :
+        DisplayScore.setText("Score : " + score);
 
     }
 }

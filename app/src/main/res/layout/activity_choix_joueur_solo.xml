@@ -33,7 +33,7 @@
         android:layout_marginTop="50dp"
         android:textColor="#FFDD00"
         android:textSize="30sp"
-        android:text="Jeu toucher"
+        android:text="Soucoupe volante"
         />
     <Button
         android:id="@+id/jeuAccelerometre"
@@ -46,11 +46,11 @@
         android:layout_marginTop="10dp"
         android:textColor="#FFDD00"
         android:textSize="30sp"
-        android:text="Jeu Accelerometre"
+        android:text="Atterissage"
         />
 
     <Button
-        android:id="@+id/jeuMorpion"
+        android:id="@+id/jeuPlanete"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/buttonshape"
@@ -60,7 +60,7 @@
         android:layout_marginTop="10dp"
         android:textColor="#FFDD00"
         android:textSize="30sp"
-        android:text="Morpion"
+        android:text="Planetes attaque"
         />
 
     <Button
@@ -68,7 +68,7 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/buttonshape"
-        android:layout_below="@+id/jeuMorpion"
+        android:layout_below="@+id/jeuPlanete"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -124,14 +124,6 @@
         android:text="Aperçu jeu accelerometre"
         android:textColor="#FFDD00"
         />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:text="Test" />
 
 
 </RelativeLayout>

@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import promob.gospace.Aventure.PageDeb;
+import promob.gospace.Aventure.Quizz1;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mGreetingText;
@@ -63,7 +66,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMulti(View view){
-        Intent startNewActivity = new Intent(this, ChoixJoueurSolo.class );
+        Intent startNewActivity = new Intent(this, PageDeb.class );
+        startActivity(startNewActivity);
+    }
+
+    public void sendMorpion(View view){
+        Intent startNewActivity = new Intent(this, Morpion.class);
         startActivity(startNewActivity);
     }
 }
