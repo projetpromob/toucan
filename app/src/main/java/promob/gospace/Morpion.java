@@ -115,18 +115,18 @@ public class Morpion extends AppCompatActivity implements View.OnClickListener {
 
         Drawable drawableJoueur;
         if (joueurEnCours == 1)
-            drawableJoueur = ContextCompat.getDrawable(this, R.drawable.x);
+            drawableJoueur = ContextCompat.getDrawable(this, R.drawable.starmo);
         else
-            drawableJoueur = ContextCompat.getDrawable(this, R.drawable.o);
+            drawableJoueur = ContextCompat.getDrawable(this, R.drawable.astemo);
         v.setBackgroundDrawable(drawableJoueur);
 
         //Changement de joueur
         if (joueurEnCours == 1) {
             joueurEnCours = 2;
-            tvJoueur.setText("O");
+            tvJoueur.setText("2");
         } else {
             joueurEnCours = 1;
-            tvJoueur.setText("X");
+            tvJoueur.setText("1");
         }
 
         int res = checkWinner();
@@ -188,9 +188,9 @@ public class Morpion extends AppCompatActivity implements View.OnClickListener {
 
         String strToDisplay = "";
         if (res == 1)
-            strToDisplay = "Les X ont gagnés !";
+            strToDisplay = "Le joueur 1 a gagné !";
         if (res == 2)
-            strToDisplay = "Les O ont gagnés !";
+            strToDisplay = "Le joueur 2 a gagné !";
         if (res == 3)
             strToDisplay = "Egalité !";
 

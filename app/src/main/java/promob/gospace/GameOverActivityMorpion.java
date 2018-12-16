@@ -45,7 +45,7 @@ public class GameOverActivityMorpion extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent mainIntent = new Intent(GameOverActivityMorpion.this , ChoixJoueurSolo.class);
+                Intent mainIntent = new Intent(GameOverActivityMorpion.this , MainActivity.class);
                 startActivity(mainIntent);
 
             }

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00374F"
+    tools:context="promob.gospace.Morpion"
+    android:gravity="center"
+    >
+
+
+
+
+    // Boutons de la première ligne :
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_toRightOf="@+id/line1"
+        />
+
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_toRightOf="@+id/line2"
+        />
+
+    // Boutons de la deuxième ligne :
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_below="@+id/line3"
+        />
+
+    <Button
+        android:id="@+id/bt5"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_below="@+id/line3"
+        android:layout_toRightOf="@+id/line1"
+        />
+
+    <Button
+        android:id="@+id/bt6"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_below="@+id/line3"
+        android:layout_toRightOf="@+id/line2"
+        />
+
+    // Boutons de la troisième ligne :
+
+    <Button
+        android:id="@+id/bt7"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_below="@+id/line4"
+        />
+
+    <Button
+        android:id="@+id/bt8"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_below="@+id/line4"
+        android:layout_toRightOf="@+id/line1"
+        />
+
+    <Button
+        android:id="@+id/bt9"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_below="@+id/line4"
+        android:layout_toRightOf="@+id/line2"
+        />
+
+    // Definition des lignes :
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="@dimen/width_line"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@id/bt1"
+        android:layout_alignTop="@id/bt1"
+        android:layout_alignBottom="@id/bt7"
+        android:background="#FFDD00"/>
+    // 0 dp car sa hauteur dépendra des boutons, ira du haut de btn 1 au bas de btn7
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="@dimen/width_line"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@id/bt2"
+        android:layout_alignTop="@id/bt1"
+        android:layout_alignBottom="@id/bt7"
+        android:background="#FFDD00"/>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/width_line"
+        android:layout_below="@id/bt1"
+        android:layout_alignLeft="@id/bt1"
+        android:layout_alignRight="@id/bt3"
+        android:background="#FFDD00"/>
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/width_line"
+        android:layout_below="@id/bt4"
+
+        android:layout_alignLeft="@id/bt1"
+        android:layout_alignRight="@id/bt3"
+        android:background="#FFDD00"/>
+
+
+
+    <ImageView
+        android:id="@+id/ImJoueur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/joueur"
+        />
+
+
+</RelativeLayout>

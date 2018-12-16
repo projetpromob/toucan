@@ -46,6 +46,7 @@ public class GameActivity2 extends AppCompatActivity {
 
                 if(i==2){
 
+                    // Quizz fini
                     Intent scoreActivity = new Intent(GameActivity2.this, ScoreActivity.class);
                     scoreActivity.putExtra("score",score);
                     startActivity(scoreActivity);

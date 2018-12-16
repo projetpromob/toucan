@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00374F"
+    tools:context="promob.gospace.Jeu_touch.PageDebSoucoupe">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:text="Touche un maximum de planètes mais attention aux planètes rouges elles te font perdre une vie !!!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/starJaune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/at3"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Une planète = 5 points !"
+        android:layout_toRightOf="@id/starJaune"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFDD00"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/starRouge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/starJaune"
+        app:srcCompat="@drawable/at2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Une vie en moins !"
+        android:layout_toRightOf="@id/starRouge"
+        android:layout_below="@+id/starJaune"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FFDD00"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
+
+
+</RelativeLayout>

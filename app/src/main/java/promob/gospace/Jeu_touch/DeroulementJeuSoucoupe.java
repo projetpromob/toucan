@@ -131,7 +131,6 @@ public class DeroulementJeuSoucoupe extends View
             mediaPlayer = MediaPlayer.create(getContext(), R.raw.ting);
             mediaPlayer.start();
 
-
             starJX = - 100;
         }
 
