@@ -1,6 +1,7 @@
 package promob.gospace.Jeu_Attaque;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,11 +20,16 @@ public class GameOverAttaque extends AppCompatActivity {
     private String score;
     private Button Change;
 
+    MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.musover);
+        mediaPlayer.start();
 
 
         // Recuperation du score :
@@ -37,6 +43,7 @@ public class GameOverAttaque extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                mediaPlayer.stop();
                 Intent mainIntent = new Intent(GameOverAttaque.this , LancementJeuAttaque.class);
                 startActivity(mainIntent);
 
@@ -47,6 +54,7 @@ public class GameOverAttaque extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                mediaPlayer.stop();
                 Intent mainIntent = new Intent(GameOverAttaque.this , ChoixJoueurSolo.class);
                 startActivity(mainIntent);
 
@@ -63,7 +71,8 @@ public class GameOverAttaque extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        Intent gameActivity = new Intent(GameOverAttaque.this, MainActivity.class);
+        mediaPlayer.stop();
+        Intent gameActivity = new Intent(GameOverAttaque.this, ChoixJoueurSolo.class);
         startActivity(gameActivity);
     }
 }

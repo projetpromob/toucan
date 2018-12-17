@@ -83,7 +83,7 @@
             android:layout_width="95dp"
             android:layout_height="150dp"
             android:layout_below="@+id/titre"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -96,8 +96,7 @@
         android:layout_width="95dp"
         android:layout_height="150dp"
         android:layout_below="@+id/titre"
-        android:layout_toRightOf="@+id/videoView"
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginRight="60dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,13 +105,30 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <VideoView
+        android:id="@+id/videoView3"
+        android:layout_width="95dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/titre"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoView3"
+        android:text="Apercu Planetes Attaque"
+        android:layout_marginLeft="265dp"
+        android:textColor="#FFDD00"
+        android:textAlignment="center"/>
+
     <TextView
         android:id="@+id/apercu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/videoView"
-        android:text="Aperçu jeu toucher"
-        android:layout_marginLeft="60dp"
+        android:text="Aperçu Soucoupe"
+        android:layout_marginLeft="14dp"
         android:textColor="#FFDD00"/>
 
     <TextView
@@ -120,8 +136,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/videoView2"
         android:layout_toRightOf="@+id/apercu"
-        android:layout_marginLeft="10dp"
-        android:text="Aperçu jeu accelerometre"
+        android:layout_marginLeft="15dp"
+        android:text="Aperçu Aterrissage"
         android:textColor="#FFDD00"
         />
 

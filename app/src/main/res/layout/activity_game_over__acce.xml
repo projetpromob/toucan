@@ -15,10 +15,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
-        android:text="Game Over"
+        android:text="Votre fusée a atterri sur la Lune"
         android:textAlignment="center"
         android:textColor="#FFDD00"
-        android:textSize="70dp"
+        android:textSize="40dp"
         android:textStyle="bold" />
 
     <Button

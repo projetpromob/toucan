@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import promob.gospace.Accelerometer.Choix_Niveau_Acce;
 import promob.gospace.Jeu_Attaque.DeroulementJeuAttaque;
 import promob.gospace.Jeu_Attaque.PageDebAttaque;
 import promob.gospace.Jeu_touch.PageDebSoucoupe;
@@ -26,6 +27,7 @@ public class ChoixJoueurSolo extends AppCompatActivity {
 
     private VideoView video;
     private VideoView video2;
+    private VideoView video3;
 
 
     @Override
@@ -50,6 +52,12 @@ public class ChoixJoueurSolo extends AppCompatActivity {
         video2.setVideoURI(uri2);
         video2.start();
 
+        video3 = (VideoView) findViewById(R.id.videoView3);
+        String videopath3 = "android.resource://" + getPackageName() + "/" + R.raw.videoplan;
+        Uri uri3 = Uri.parse(videopath3);
+        video3.setVideoURI(uri3);
+        video3.start();
+
 
         //jeuTouch.setEnabled(false);
         jeuTouch.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +76,7 @@ public class ChoixJoueurSolo extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent gameActivity = new Intent(ChoixJoueurSolo.this , PageDebAccelerometer.class);
+                Intent gameActivity = new Intent(ChoixJoueurSolo.this , Choix_Niveau_Acce.class);
                 startActivity(gameActivity);
             }
 

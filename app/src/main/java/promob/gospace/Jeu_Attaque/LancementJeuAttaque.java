@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import promob.gospace.ChoixJoueurSolo;
 import promob.gospace.MainActivity;
 import promob.gospace.R;
 
@@ -58,7 +59,7 @@ public class LancementJeuAttaque extends AppCompatActivity
     @Override
     public void onBackPressed() {
 
-        Intent gameActivity = new Intent(LancementJeuAttaque.this, MainActivity.class);
+        Intent gameActivity = new Intent(LancementJeuAttaque.this, ChoixJoueurSolo.class);
         startActivity(gameActivity);
     }
 }

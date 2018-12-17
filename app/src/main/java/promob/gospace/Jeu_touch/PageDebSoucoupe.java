@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import promob.gospace.Accelerometer.Choix_Niveau_Acce;
+import promob.gospace.ChoixJoueurSolo;
 import promob.gospace.R;
 
 public class PageDebSoucoupe extends AppCompatActivity {
@@ -43,5 +45,12 @@ public class PageDebSoucoupe extends AppCompatActivity {
     {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(PageDebSoucoupe.this, ChoixJoueurSolo.class);
+        startActivity(gameActivity);
     }
 }

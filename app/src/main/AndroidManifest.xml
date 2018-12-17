@@ -51,8 +51,9 @@
         <activity android:name=".Aventure.Jeu_Attaque.LancementJeuAttaque" />
         <activity android:name=".Aventure.Jeu_Attaque.GameOverAttaque" />
         <activity android:name=".Aventure.PageDeb" />
-        <activity android:name=".Multi.PageFin"/>
+        <activity android:name=".Multi.PageFin" />
         <activity android:name=".GameOverActivityMorpion" />
+        <activity android:name=".Accelerometer.Choix_Niveau_Acce"></activity>
     </application>
 
 </manifest>

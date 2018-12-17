@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import promob.gospace.ChoixJoueurSolo;
 import promob.gospace.MainActivity;
 import promob.gospace.R;
 import promob.gospace.ScoreActivity;
@@ -70,7 +71,7 @@ public class GameActivity2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        Intent gameActivity = new Intent(GameActivity2.this, MainActivity.class);
+        Intent gameActivity = new Intent(GameActivity2.this, ChoixJoueurSolo.class);
         startActivity(gameActivity);
         this.onStop();
     }

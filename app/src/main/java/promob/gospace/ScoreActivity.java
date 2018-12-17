@@ -1,6 +1,7 @@
 package promob.gospace;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,10 +18,15 @@ public class ScoreActivity extends AppCompatActivity {
     private Button Change;
     private TextView DisplayScore;
 
+    MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.musover);
+        mediaPlayer.start();
 
         Rejouer = (Button) findViewById(R.id.rejouer_btn);
         Change = (Button) findViewById(R.id.changer_btn);
@@ -34,6 +40,7 @@ public class ScoreActivity extends AppCompatActivity {
         Rejouer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mediaPlayer.stop();
                 Intent Main = new Intent(ScoreActivity.this, GameActivity.class);
                 Main.putExtra("best",score);
                 startActivity(Main);
@@ -43,6 +50,7 @@ public class ScoreActivity extends AppCompatActivity {
         Change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mediaPlayer.stop();
                 Intent Main = new Intent(ScoreActivity.this, ChoixJoueurSolo.class);
                 Main.putExtra("best",score);
                 startActivity(Main);
@@ -53,6 +61,7 @@ public class ScoreActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        mediaPlayer.stop();
         Intent gameActivity = new Intent(ScoreActivity.this, MainActivity.class);
         startActivity(gameActivity);
     }

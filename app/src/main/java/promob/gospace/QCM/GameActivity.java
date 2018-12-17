@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+import promob.gospace.ChoixJoueurSolo;
 import promob.gospace.MainActivity;
 import promob.gospace.R;
 
@@ -20,7 +21,7 @@ public class GameActivity extends AppCompatActivity {
 
     List <List<String>> questionreponse = new ArrayList();
 
-    private int score;
+    private int score = 0;
 
     private TextView question,resultat;
     private Button button1;
@@ -210,7 +211,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        Intent gameActivity = new Intent(GameActivity.this, MainActivity.class);
+        Intent gameActivity = new Intent(GameActivity.this, ChoixJoueurSolo.class);
         startActivity(gameActivity);
         this.onStop();
     }

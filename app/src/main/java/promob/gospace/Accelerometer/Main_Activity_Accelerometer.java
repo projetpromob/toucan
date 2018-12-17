@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import promob.gospace.ChoixJoueurSolo;
 import promob.gospace.MainActivity;
 import promob.gospace.QCM.GameActivity2;
 
@@ -29,16 +30,21 @@ public class Main_Activity_Accelerometer extends Activity {
     // Le moteur physique du jeu
     private Moteur_Physique mEngine = null;
 
+    private String reponse;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent callingIntent = getIntent();
+        reponse = callingIntent.getStringExtra("niveau");
 
         Fusee b = new Fusee();
 
         mView = new Moteur_Graphique(this);
         mView.setFusee(b);
 
-        mEngine = new Moteur_Physique(this);
+        mEngine = new Moteur_Physique(this, reponse);
 
         mEngine.setFusee(b);
 
@@ -139,7 +145,7 @@ public class Main_Activity_Accelerometer extends Activity {
     @Override
     public void onBackPressed() {
 
-        Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, MainActivity.class);
+        Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, ChoixJoueurSolo.class);
         startActivity(gameActivity);
         mEngine.stop();
         this.onStop();

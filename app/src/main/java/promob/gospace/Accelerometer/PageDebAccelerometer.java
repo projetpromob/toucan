@@ -4,14 +4,22 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import promob.gospace.ChoixJoueurSolo;
 import promob.gospace.R;
 
 public class PageDebAccelerometer extends AppCompatActivity {
+
+    private String reponse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_deb_accelerometer);
+
+        Intent callingIntent = getIntent();
+        reponse = callingIntent.getStringExtra("niveau");
+
+
 
         Thread thread = new Thread()
         {
@@ -30,6 +38,7 @@ public class PageDebAccelerometer extends AppCompatActivity {
                 finally
                 {
                     Intent mainIntent = new Intent(PageDebAccelerometer.this , Main_Activity_Accelerometer.class);
+                    mainIntent.putExtra("niveau",reponse);
                     startActivity(mainIntent);
                 }
             }
@@ -43,5 +52,12 @@ public class PageDebAccelerometer extends AppCompatActivity {
     {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(PageDebAccelerometer.this, ChoixJoueurSolo.class);
+        startActivity(gameActivity);
     }
 }
