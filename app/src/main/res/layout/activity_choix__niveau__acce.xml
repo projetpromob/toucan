@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Accelerometer.Choix_Niveau_Acce"
-    android:background="@drawable/fondglobal2"
+    android:background="@drawable/fondglobalmain"
     >
 
     <TextView
@@ -18,7 +18,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:padding="20dp"
-        android:text="Choissisez votre difficulté : "
+        android:text="Choissisez votre difficulté"
         android:textColor="#FFDD00"
         android:textSize="23sp"
         android:textStyle="bold" />
@@ -26,42 +26,45 @@
 
     <Button
         android:id="@+id/facile"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/textNiveau"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
         android:background="@drawable/buttonshape"
         android:text="Facile"
         android:textColor="#FFDD00"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/difficile"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/facile"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttonshape"
         android:text="Difficile"
         android:textColor="#FFDD00"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/extreme"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/difficile"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttonshape"
         android:text="Extreme"
         android:textColor="#FFDD00"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
 
 

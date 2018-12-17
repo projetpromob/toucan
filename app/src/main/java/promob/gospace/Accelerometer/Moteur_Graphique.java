@@ -154,7 +154,7 @@ public class Moteur_Graphique extends SurfaceView implements SurfaceHolder.Callb
                 }
 
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(20);
                 } catch (InterruptedException e) {}
             }
         }

@@ -1,4 +1,4 @@
-package promob.gospace.Aventure.Accelerometer;
+package promob.gospace.Aventure_solo.Accelerometer;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

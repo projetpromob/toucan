@@ -24,6 +24,7 @@ public class ChoixJoueurSolo extends AppCompatActivity {
     private Button jeuAcce;
     private Button planete;
     private Button quizz;
+    private Button aventure;
 
     private VideoView video;
     private VideoView video2;
@@ -39,6 +40,7 @@ public class ChoixJoueurSolo extends AppCompatActivity {
         jeuAcce = (Button) findViewById(R.id.jeuAccelerometre);
         planete = (Button) findViewById(R.id.jeuPlanete);
         quizz = (Button) findViewById(R.id.jeuQuizz);
+        aventure = (Button) findViewById(R.id.aventuresolo);
 
         video = (VideoView) findViewById(R.id.videoView);
         String videopath = "android.resource://" + getPackageName() + "/" + R.raw.videotouch;
@@ -96,6 +98,15 @@ public class ChoixJoueurSolo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gameActivity = new Intent(ChoixJoueurSolo.this , GameActivity.class);
+                startActivity(gameActivity);
+            }
+        });
+
+        aventure.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent gameActivity = new Intent(ChoixJoueurSolo.this , promob.gospace.Aventure_solo.PageDeb.class);
                 startActivity(gameActivity);
             }
         });

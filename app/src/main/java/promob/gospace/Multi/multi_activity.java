@@ -98,19 +98,32 @@ public class multi_activity extends AppCompatActivity {
                     byte[] readBuff = (byte[]) msg.obj;
                     String tempMsg = new String(readBuff,0,msg.arg1);
 
+                    Log.i("BUUUUUUUUUUUUG",tempMsg);
+
                     if(tempMsg.substring(0,3).equals("###")){
+
+                        String bla = ("###" + String.valueOf(res) );
+                        Log.i("BLAAAAAAAAAAA",bla);
+
+                        sendReceive.write(bla.getBytes());
 
                         Intent score = new Intent(multi_activity.this, PageFin.class);
                         if( Integer.valueOf(tempMsg.substring(3,tempMsg.length()))  < res){
 
                             score.putExtra("res", "gagnant");
+                            Log.i("WIIIIIINNNNER","gagnant");
 
                         }else {
 
                             score.putExtra("res","perdant");
+                            Log.i("WIIIIIINNNNER","gagnant");
+
 
                         }
                         startActivity(score);
+                        scoreText.setText("Commencer");
+                        return false;
+
 
                     } else {
 
@@ -132,7 +145,10 @@ public class multi_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(scoreText.getText() == "Commencer"){
+                if(scoreText.getText().equals("Commencer")){
+
+                    Log.i("kkkkkkkkkkkkkkkkkkk","ffff");
+
 
                     Intent i = new Intent(multi_activity.this, promob.gospace.Aventure.PageDeb.class);
                     scoreText.setText("0");
@@ -140,14 +156,15 @@ public class multi_activity extends AppCompatActivity {
 
                 } else {
 
-                    Log.i("debug",scoreText.getText().toString());
 
                     String msg = ("###" + String.valueOf(res) );
+                    Log.i("kkkkkkkkkkkkkkkkkkk",msg);
+
 
                     sendReceive.write( msg.getBytes() );
+                    scoreText.setText("Commencer");
 
                 }
-
 
 
             }
@@ -230,27 +247,27 @@ public class multi_activity extends AppCompatActivity {
         scoreText = (Button) findViewById(R.id.score);
 
 
-            Intent callingIntent = getIntent();
-            int scoreprec = callingIntent.getIntExtra("scoreAttaque",0);
+        Intent callingIntent = getIntent();
+        int scoreprec = callingIntent.getIntExtra("scoreAttaque",0);
 
-            SharedPreferences prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
-            int scores = prefs.getInt("key", 0); //0 is the default value
+        SharedPreferences prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+        int scores = prefs.getInt("key", 0); //0 is the default value
 
-            SharedPreferences.Editor editor = prefs.edit();
-            res = scores+scoreprec;
+        SharedPreferences.Editor editor = prefs.edit();
+        res = scores+scoreprec;
 
-            editor.putInt("key", res);
-            editor.commit();
+        editor.putInt("key", res);
+        editor.commit();
 
 
-            //Log.i("deug", String.valueOf(res));
+        //Log.i("deug", String.valueOf(res));
 
-            if(res<=0){
-                scoreText.setText("Commencer");
-            }else {
-                scoreText.setText(String.valueOf(res));
+        if(res<=0){
+            scoreText.setText("Commencer");
+        }else {
+            scoreText.setText(String.valueOf(res));
 
-            }
+        }
 
 
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);

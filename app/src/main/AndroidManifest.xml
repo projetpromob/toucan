@@ -25,35 +25,130 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Morpion" />
-        <activity android:name=".Jeu_touch.LancementJeuSoucoupe" />
-        <activity android:name=".Jeu_touch.PageDebSoucoupe" />
-        <activity android:name=".Jeu_touch.GameOverActivity" />
-        <activity android:name=".ChoixJoueurSolo" />
-        <activity android:name=".Multi.multi_activity" />
-        <activity android:name=".ScoreActivity" />
-        <activity android:name=".Accelerometer.Main_Activity_Accelerometer" />
-        <activity android:name=".Accelerometer.GameOverActivity_Acce" />
-        <activity android:name=".QCM.GameActivity" />
-        <activity android:name=".QCM.GameActivity2" />
-        <activity android:name=".Accelerometer.PageDebAccelerometer" />
-        <activity android:name=".Jeu_Attaque.LancementJeuAttaque" />
-        <activity android:name=".Jeu_Attaque.GameOverAttaque" />
-        <activity android:name=".Jeu_Attaque.PageDebAttaque" />
-        <activity android:name=".Aventure.Quizz1" />
-        <activity android:name=".Aventure.Quizz2" />
-        <activity android:name=".Aventure.Accelerometer.PageDebAccelerometer" />
-        <activity android:name=".Aventure.Accelerometer.Main_Activity_Accelerometer" />
-        <activity android:name=".Aventure.Accelerometer.GameOverActivity_Acce" />
-        <activity android:name=".Aventure.Jeu_touch.PageDebSoucoupe" />
-        <activity android:name=".Aventure.Jeu_touch.LancementJeuSoucoupe" />
-        <activity android:name=".Aventure.Jeu_Attaque.PageDebAttaque" />
-        <activity android:name=".Aventure.Jeu_Attaque.LancementJeuAttaque" />
-        <activity android:name=".Aventure.Jeu_Attaque.GameOverAttaque" />
-        <activity android:name=".Aventure.PageDeb" />
-        <activity android:name=".Multi.PageFin" />
-        <activity android:name=".GameOverActivityMorpion" />
-        <activity android:name=".Accelerometer.Choix_Niveau_Acce"></activity>
+        <activity
+            android:name=".Morpion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jeu_touch.LancementJeuSoucoupe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jeu_touch.PageDebSoucoupe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jeu_touch.GameOverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChoixJoueurSolo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Multi.multi_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Accelerometer.Main_Activity_Accelerometer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Accelerometer.GameOverActivity_Acce"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QCM.GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QCM.GameActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Accelerometer.PageDebAccelerometer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jeu_Attaque.LancementJeuAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jeu_Attaque.GameOverAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jeu_Attaque.PageDebAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Quizz1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Quizz2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Accelerometer.PageDebAccelerometer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Accelerometer.Main_Activity_Accelerometer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Accelerometer.GameOverActivity_Acce"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Jeu_touch.PageDebSoucoupe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Jeu_touch.LancementJeuSoucoupe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Jeu_Attaque.PageDebAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Jeu_Attaque.LancementJeuAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.Jeu_Attaque.GameOverAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure.PageDeb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Multi.PageFin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GameOverActivityMorpion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Accelerometer.Choix_Niveau_Acce"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Quizz1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Quizz2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Accelerometer.PageDebAccelerometer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Accelerometer.Main_Activity_Accelerometer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Accelerometer.GameOverActivity_Acce"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Jeu_touch.PageDebSoucoupe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Jeu_touch.LancementJeuSoucoupe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Jeu_Attaque.PageDebAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Jeu_Attaque.LancementJeuAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.Jeu_Attaque.GameOverAttaque"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Aventure_solo.PageDeb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Credit"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Aventure_solo.end_activity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

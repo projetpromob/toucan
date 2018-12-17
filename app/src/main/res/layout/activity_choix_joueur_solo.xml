@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="promob.gospace.MainActivity"
-    android:background="@drawable/fondglobal2"
+    android:background="@drawable/fondglobalmain"
     >
 
     <TextView
@@ -20,60 +20,74 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
 
-
     <Button
-        android:id="@+id/jeuTouch"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:id="@+id/aventuresolo"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
 
         android:background="@drawable/buttonshape"
         android:layout_gravity="center_horizontal"
         android:layout_below="@+id/videoView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:textColor="#FFDD00"
-        android:textSize="30sp"
+        android:textSize="20sp"
+        android:text="Aventure solo"
+        />
+
+
+    <Button
+        android:id="@+id/jeuTouch"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonshape"
+        android:layout_below="@+id/aventuresolo"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFDD00"
+        android:textSize="20sp"
         android:text="Soucoupe volante"
         />
     <Button
         android:id="@+id/jeuAccelerometre"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
         android:background="@drawable/buttonshape"
         android:layout_below="@+id/jeuTouch"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textColor="#FFDD00"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:text="Atterissage"
         />
 
     <Button
         android:id="@+id/jeuPlanete"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
         android:background="@drawable/buttonshape"
         android:layout_below="@+id/jeuAccelerometre"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textColor="#FFDD00"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:text="Planetes attaque"
         />
 
     <Button
         android:id="@+id/jeuQuizz"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
         android:background="@drawable/buttonshape"
         android:layout_below="@+id/jeuPlanete"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textColor="#FFDD00"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:text="Quizz"
         />
 

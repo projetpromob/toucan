@@ -58,6 +58,7 @@
         android:layout_toEndOf="@+id/sendButton"
         android:layout_toRightOf="@+id/sendButton"
         android:ems="10"
+        android:text=""
         android:inputType="textPersonName" />
 
     <Button

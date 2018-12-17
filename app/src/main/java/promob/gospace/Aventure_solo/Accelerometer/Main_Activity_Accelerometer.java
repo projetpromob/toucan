@@ -1,4 +1,4 @@
-package promob.gospace.Aventure.Accelerometer;
+package promob.gospace.Aventure_solo.Accelerometer;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -110,7 +110,7 @@ public class Main_Activity_Accelerometer extends Activity {
 
 
                                 //Lancer le jeu suivant :
-                                Intent jeusuivant2 = new Intent(Main_Activity_Accelerometer.this, promob.gospace.Aventure.Jeu_touch.PageDebSoucoupe.class);
+                                Intent jeusuivant2 = new Intent(Main_Activity_Accelerometer.this, promob.gospace.Aventure_solo.Jeu_touch.PageDebSoucoupe.class);
                                 startActivity(jeusuivant2);
 
                                 /*

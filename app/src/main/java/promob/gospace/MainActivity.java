@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import promob.gospace.Aventure.Accelerometer.Main_Activity_Accelerometer;
 import promob.gospace.Aventure.PageDeb;
 import promob.gospace.Aventure.Quizz1;
 
@@ -80,5 +81,17 @@ public class MainActivity extends AppCompatActivity {
     public void sendMorpion(View view){
         Intent startNewActivity = new Intent(this, Morpion.class);
         startActivity(startNewActivity);
+    }
+
+    public void sendCredit (View view){
+        Intent startNewActivity = new Intent(this, Credit.class);
+        startActivity(startNewActivity);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(gameActivity);
     }
 }
