@@ -62,7 +62,8 @@ public class end_activity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent mainIntent = new Intent(end_activity.this , LancementJeuAttaque.class);
+                mediaPlayer.stop();
+                Intent mainIntent = new Intent(end_activity.this , promob.gospace.Aventure_solo.PageDeb.class);
                 startActivity(mainIntent);
 
             }
@@ -72,6 +73,7 @@ public class end_activity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                mediaPlayer.stop();
                 Intent mainIntent = new Intent(end_activity.this , ChoixJoueurSolo.class);
                 startActivity(mainIntent);
 

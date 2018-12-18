@@ -98,7 +98,6 @@ public class Main_Activity_Accelerometer extends Activity {
 
         switch(id) {
             case VICTORY_DIALOG:
-                                // L'utilisateur peut recommencer s'il le veut
 
                                 SharedPreferences prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
                                 int scores = prefs.getInt("key", 0); //0 is the default value
@@ -113,13 +112,7 @@ public class Main_Activity_Accelerometer extends Activity {
                                 Intent jeusuivant2 = new Intent(Main_Activity_Accelerometer.this, promob.gospace.Aventure_solo.Jeu_touch.PageDebSoucoupe.class);
                                 startActivity(jeusuivant2);
 
-                                /*
-                                Intent gameActivity = new Intent(Main_Activity_Accelerometer.this, GameOverActivity_Acce.class);
-                                gameActivity.putExtra("scoreRecupA",final_time);
-                                startActivity(gameActivity);*/
-
-
-                break;
+                                                break;
 
             case DEFEAT_DIALOG:
                 builder.setCancelable(false)

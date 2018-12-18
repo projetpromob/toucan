@@ -1,6 +1,7 @@
 package promob.gospace;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,11 +21,15 @@ public class GameOverActivityMorpion extends AppCompatActivity {
     private String gagnant;
     private Button Change;
 
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over_morpion);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.musover);
+        mediaPlayer.start();
 
         gagnant = getIntent().getExtras().get("gagnant").toString();
 
@@ -36,6 +41,7 @@ public class GameOverActivityMorpion extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                mediaPlayer.stop();
                 Intent mainIntent = new Intent(GameOverActivityMorpion.this , Morpion.class);
                 startActivity(mainIntent);
 
@@ -46,6 +52,7 @@ public class GameOverActivityMorpion extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                mediaPlayer.stop();
                 Intent mainIntent = new Intent(GameOverActivityMorpion.this , MainActivity.class);
                 startActivity(mainIntent);
 

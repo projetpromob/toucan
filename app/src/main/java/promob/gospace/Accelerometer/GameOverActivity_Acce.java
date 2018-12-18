@@ -27,7 +27,7 @@ public class GameOverActivity_Acce extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_over);
+        setContentView(R.layout.activity_game_over__acce);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.musover);
         mediaPlayer.start();
@@ -36,9 +36,9 @@ public class GameOverActivity_Acce extends AppCompatActivity {
         // Recuperation du score :
         score = getIntent().getExtras().get("scoreRecupA").toString();
 
-        Rejouer = (Button) findViewById(R.id.rejouer_btn);
-        Change = (Button) findViewById(R.id.changer_btn);
-        DisplayScore = (TextView) findViewById(R.id.displayScore);
+        Rejouer = (Button) findViewById(R.id.rejouer_btnA);
+        Change = (Button) findViewById(R.id.changer_btnA);
+        DisplayScore = (TextView) findViewById(R.id.displayScoreA);
 
         Rejouer.setOnClickListener(new View.OnClickListener() {
             @Override

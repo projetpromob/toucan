@@ -40,4 +40,11 @@ public class PageFin extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent gameActivity = new Intent(PageFin.this, MainActivity.class);
+        startActivity(gameActivity);
+    }
 }

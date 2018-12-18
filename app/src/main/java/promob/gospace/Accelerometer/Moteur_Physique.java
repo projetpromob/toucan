@@ -1,6 +1,7 @@
 package promob.gospace.Accelerometer;
 
 import android.app.Service;
+import android.content.Intent;
 import android.graphics.RectF;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -114,46 +115,61 @@ class Moteur_Physique {
 
         planetes = new ArrayList<>();
 
-        if(reponse.equals("facile")){
+        try{
+
+            if(reponse.equals("facile")){
+
+                planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
+
+
+
+            }else if (reponse.equals("difficile")) {
+
+                planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
+
+            } else {
+
+                planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.4f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.5f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.8f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.68f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.2f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.25f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.23f));
+                planetes.add(new Planete(Planete.Type.METEORITE,0.34f));
+
+            }
+
+
+
+        } catch (Exception e){
 
             planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
             planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
             planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
             planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
-
-
-
-        }else if (reponse.equals("difficile")) {
-
-            planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
-
-        } else {
-
-            planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.3f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.45f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.6f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.75f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.4f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.5f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.8f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.68f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.2f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.25f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.23f));
-            planetes.add(new Planete(Planete.Type.METEORITE,0.34f));
 
         }
+
+
 
         planetes.add(new Planete(Planete.Type.LUNE));
         planetes.add(new Planete(Planete.Type.TERRE));

@@ -43,13 +43,13 @@ public class ChoixJoueurSolo extends AppCompatActivity {
         aventure = (Button) findViewById(R.id.aventuresolo);
 
         video = (VideoView) findViewById(R.id.videoView);
-        String videopath = "android.resource://" + getPackageName() + "/" + R.raw.videotouch;
+        String videopath = "android.resource://" + getPackageName() + "/" + R.raw.videotouchre;
         Uri uri = Uri.parse(videopath);
         video.setVideoURI(uri);
         video.start();
 
         video2 = (VideoView) findViewById(R.id.videoView2);
-        String videopath2 = "android.resource://" + getPackageName() + "/" + R.raw.videoacce;
+        String videopath2 = "android.resource://" + getPackageName() + "/" + R.raw.videoaccere;
         Uri uri2 = Uri.parse(videopath2);
         video2.setVideoURI(uri2);
         video2.start();
